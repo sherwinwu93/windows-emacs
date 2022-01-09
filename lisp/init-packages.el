@@ -23,6 +23,7 @@
 		exec-path-from-shell
 		;; --- Themes ---
 		monokai-theme
+		zenburn-theme
 		dracula-theme
 		;; solarized-theme
 		;; rime

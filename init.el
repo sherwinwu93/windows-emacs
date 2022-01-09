@@ -74,7 +74,7 @@
 ;;更改光标样式
 ;; (setq cursor-type 'bar)
 ;; 全局而不是局部修改
-;; (setq-default cursor-type 'bar)
+(setq-default cursor-type 'bar)
 ;; 关闭启动帮助画面
 ;;(setq inhibit-splash-screen 1)
 ;; 关闭缩进
@@ -100,14 +100,15 @@
 ;;选中输入时,替换而不是增加
 (delete-selection-mode 1)
 ;;设置Emacs默认全屏
-(setq initial-frame-alist '((fullscreen . maximized)))
+;;(setq initial-frame-alist '((fullscreen . maximized)))
 ;;设置hook,自动括号匹配
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 ;;高亮当前行
 (global-hl-line-mode 1)
 ;;安装主题
-(add-to-list 'my/packages 'monokai-theme)
-(load-theme 'monokai 1)
+(add-to-list 'my/packages 'dracula-theme)
+(add-to-list 'my/packages 'zenburn-theme)
+(load-theme 'dracula 1)
 ;;设置js2-mode
 (setq auto-mode-alist
       (append
@@ -138,10 +139,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(use-package rime better-defaults)))
+ '(package-selected-packages '(use-package rime better-defaults))
+ '(show-paren-mode t)
+p '(tool-bar-mode nil)
+ '(transient-mark-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Consolas" :foundry "outline" :slant normal :weight normal :height 125 :width normal)))))
+ '(default ((t (:family "Consolas" :foundry "MS  " :slant normal :weight normal :height 110 :width normal)))))
