@@ -1,10 +1,10 @@
-;; ----------配置插件源
+;; ----------------------------------------配置插件源
  (when (>= emacs-major-version 24)
      (require 'package)
      (package-initialize)
      (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-		      ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
-;; 注意 elpa.emacs-china.org 是 Emacs China 中文社区在国内搭建的一个 ELPA 镜像
+		      ("melpa" . "http://elpa.emacs-china.org/melpa/")
+		      ("org" . "https://orgmode.org/elpa/"))))
  ;; cl - Common Lisp Extension
  (require 'cl)
  ;; Add Packages
@@ -23,7 +23,11 @@
 		exec-path-from-shell
 		;; --- Themes ---
 		monokai-theme
+		dracula-theme
 		;; solarized-theme
+		;; rime
+		use-package
+		posframe
 		) "Default packages")
  (setq package-selected-packages my/packages)
  (defun my/packages-installed-p ()
@@ -39,18 +43,6 @@
  ;; Find Executable Path on OS X
  (when (memq window-system '(mac ns))
    (exec-path-from-shell-initialize))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "Consolas" :foundry "outline" :slant normal :weight normal :height 105 :width normal)))))
 ;; 自动启用文本模式和自动换行模式
 ;; setq-default等价于Esc x set-variable 
 (setq-default major-mode 'text-mode)
@@ -58,6 +50,7 @@
 ;; 自动启用临时标记模式
 (setq-default transient-mark-mode nil)
 ;; 解决控制问题
+;;(enable-flow-control)
 ;; 重新绑定键盘按键
 (global-unset-key "\e\e")
 (global-unset-key "\C-x\C-u")
@@ -71,13 +64,11 @@
 ;; 替换时不改变大小写情况
 (setq-default case-replace nil)
 ;; 更改默认目录
-(setq default-directory "d:/git-code/")
+(setq default-directory "~/")
 ;; 添加永久缩写词汇
 (setq-default abbrev-mode t)
 (read-abbrev-file "~/.emacs.d/.abbrev_defs")
 (setq save-abbrevs t)
-(fset 'test-macro
-      (kmacro-lambda-form [return] 0 "%d"))
 ;; 键位映射图增加定义的方法
 ;;(define-key keymap "keystroke" 'command-name)
 ;;(global-set-key "keystroke" 'command-name)
@@ -95,7 +86,7 @@
      '(("\\.ada\\'" . js-mode))
      auto-mode-alist))
 
-;; -------简单的编辑器定义
+;; ----------------------------------------简单的编辑器定义
 ;; 关闭工具栏
 (tool-bar-mode -1)
 ;; 关闭文件滑动控件
@@ -107,7 +98,7 @@
 ;; 全局而不是局部修改
 ;; (setq-default cursor-type 'bar)
 ;; 关闭启动帮助画面
-(setq inhibit-splash-screen 1)
+;;(setq inhibit-splash-screen 1)
 ;; 关闭缩进
 (electric-indent-mode -1)
 ;;更改显示字体大小
@@ -122,7 +113,7 @@
 (global-company-mode 1)
 ;; 关闭自动生成备份文件
 (setq make-backup-files nil)
-;; -------最近打开过文件选项
+;; ----------------------------------------最近打开过文件选项
 ;; 从文件中加载特性
 (require 'recentf)
 (recentf-mode 1)
@@ -131,7 +122,7 @@
 ;;选中输入时,替换而不是增加
 (delete-selection-mode 1)
 ;;设置Emacs默认全屏
-;;(setq initial-frame-alist '((fullscreen . maximized)))
+(setq initial-frame-alist '((fullscreen . maximized)))
 ;;设置hook,自动括号匹配
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 ;;高亮当前行
@@ -149,6 +140,30 @@
 (setq org-src-fontify-natively t)
 ;;Agenda的使用
 ;;设置默认Org Agenda文件目录
-(setq org-agenda-files '("d:/git-code/notes/todos"))
+(setq org-agenda-files '("~/codes/notes/todos"))
 ;;设置org-agenda打开快捷键
 (global-set-key (kbd "C-c a") 'org-agenda)
+;; rime输入法
+(require 'use-package)
+(require 'posframe)
+;; 让 use-package 永远按需安装软件包
+(setq use-package-always-ensure t)
+
+;; 之后就可以使用它了。
+;; 要使用简体中文，记得修改defualt.yml
+(use-package rime
+  :custom
+  (default-input-method "rime"))
+(setq rime-show-candidate 'posframe)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(use-package rime better-defaults)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "Consolas" :foundry "outline" :slant normal :weight normal :height 125 :width normal)))))
