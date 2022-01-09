@@ -1,34 +1,11 @@
-;; ----------------------------------------配置插件源
- (when (>= emacs-major-version 24)
-     (require 'package)
-     (package-initialize)
-     (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-		      ("melpa" . "http://elpa.emacs-china.org/melpa/")
-		      ("org" . "https://orgmode.org/elpa/"))))
- ;; cl - Common Lisp Extension
- (require 'cl)
- ;; Add Packages
- (defvar my/packages '(
-		;; --- Auto-completion ---
-		company
-		;; --- Better Editor ---
-		hungry-delete
-		swiper
-		counsel
-		smartparens
-		;; --- Major Mode ---
-		js2-mode
-		;; --- Minor Mode ---
-		nodejs-repl
-		exec-path-from-shell
-		;; --- Themes ---
-		monokai-theme
-		dracula-theme
-		;; solarized-theme
-		;; rime
-		use-package
-		posframe
-		) "Default packages")
+;;(package-initialize)
+
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+
+(require 'init-packages)
+;; ----------------------------------------macos
+(require 'kbd-macros)
+
  (setq package-selected-packages my/packages)
  (defun my/packages-installed-p ()
      (loop for pkg in my/packages
@@ -43,6 +20,7 @@
  ;; Find Executable Path on OS X
  (when (memq window-system '(mac ns))
    (exec-path-from-shell-initialize))
+
 ;; 自动启用文本模式和自动换行模式
 ;; setq-default等价于Esc x set-variable 
 (setq-default major-mode 'text-mode)
