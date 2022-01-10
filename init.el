@@ -2,6 +2,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
+(require 'xscheme)
 (require 'init-packages)
 ;; ----------------------------------------macos
 (require 'kbd-macros)
