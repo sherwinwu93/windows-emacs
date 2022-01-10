@@ -132,14 +132,7 @@
 ;; 要使用简体中文，记得修改defualt.yml
 (use-package rime
   :custom
-  (default-input-method "rime")
- :bind
-  (:map rime-active-mode-map
-   ("<tab>" . 'rime-inline-ascii)
-   :map rime-mode-map
-   ("C-`" . 'rime-send-keybinding)    ;; <---- 
-   ("M-j" . 'rime-force-enable))
-)
+  (default-input-method "rime"))
 (setq rime-show-candidate 'posframe)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -155,4 +148,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Consolas" :foundry "MS  " :slant normal :weight normal :height 97 :width normal)))))
+)
