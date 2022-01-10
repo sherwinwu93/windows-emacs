@@ -70,8 +70,6 @@
 (tool-bar-mode -1)
 ;; 关闭文件滑动控件
 (scroll-bar-mode -1)
-;; 显示行号
-(global-linum-mode 1)
 ;;更改光标样式
 ;; (setq cursor-type 'bar)
 ;; 全局而不是局部修改
@@ -86,8 +84,8 @@
 (defun open-init-file()
   (interactive)
   (find-file "~/.emacs.d/init.el"))
-;; 将open-init-file绑定到<f5>上
-(global-set-key (kbd "<f5>") 'open-init-file)
+;; 将open-init-file绑定到<f9>上
+(global-set-key (kbd "<f9>") 'open-init-file)
 ;; 开启全局Company补全
 (global-company-mode 1)
 ;; 关闭自动生成备份文件
@@ -157,3 +155,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Consolas" :foundry "MS  " :slant normal :weight normal :height 97 :width normal)))))
+;; 显示行号
+(global-display-line-numbers-mode)
+(setq-default display-line-numbers 'relative)
