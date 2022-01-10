@@ -2,9 +2,9 @@
  (when (>= emacs-major-version 24)
      (require 'package)
      (package-initialize)
-     (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-		      ("melpa" . "http://elpa.emacs-china.org/melpa/")
-		      ("org" . "https://orgmode.org/elpa/"))))
+     (setq package-archives '(("gnu" . "http://mirrors.ustc.edu.cn/elpa/gnu/")
+                         ("melpa" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
+                         ("org" . "http://mirrors.ustc.edu.cn/elpa/org/"))))
  ;; cl - Common Lisp Extension
  (require 'cl)
 ;; Add Packages

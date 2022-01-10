@@ -107,8 +107,8 @@
 (global-hl-line-mode 1)
 ;;安装主题
 (add-to-list 'my/packages 'dracula-theme)
-(add-to-list 'my/packages 'zenburn-theme)
-(load-theme 'dracula 1)
+(add-to-list 'my/packages 'monokai-theme)
+(load-theme 'monokai 1)
 ;;设置js2-mode
 (setq auto-mode-alist
       (append
@@ -148,4 +148,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Consolas" :foundry "MS  " :slant normal :weight normal :height 110 :width normal)))))
+)
