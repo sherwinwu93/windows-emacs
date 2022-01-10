@@ -100,7 +100,7 @@
 ;;选中输入时,替换而不是增加
 (delete-selection-mode 1)
 ;;设置Emacs默认全屏
-;;(setq initial-frame-alist '((fullscreen . maximized)))
+(setq initial-frame-alist '((fullscreen . maximized)))
 ;;设置hook,自动括号匹配
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 ;;高亮当前行
@@ -141,7 +141,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages '(use-package rime better-defaults))
  '(show-paren-mode t)
-p '(tool-bar-mode nil)
+ '(tool-bar-mode nil)
  '(transient-mark-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
