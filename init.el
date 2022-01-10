@@ -83,9 +83,10 @@
 ;; 快速打开配置文件
 (defun open-init-file()
   (interactive)
+  (setq-default display-line-numbers 'relative)
   (find-file "~/.emacs.d/init.el"))
 ;; 将open-init-file绑定到<f9>上
-(global-set-key (kbd "<f9>") 'open-init-file)
+;;(global-set-key (kbd "<f9>") 'open-init-file)
 ;; 开启全局Company补全
 (global-company-mode 1)
 ;; 关闭自动生成备份文件
@@ -157,4 +158,5 @@
  '(default ((t (:family "Consolas" :foundry "MS  " :slant normal :weight normal :height 97 :width normal)))))
 ;; 显示行号
 (global-display-line-numbers-mode)
-(setq-default display-line-numbers 'relative)
+(setq display-line-numbers-type 'relative)
+(setq-default display-line-numbers-type 'relative)
