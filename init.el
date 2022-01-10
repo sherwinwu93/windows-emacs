@@ -1,11 +1,13 @@
 ;;(package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+(require 'init-packages)
 
 (require 'init-scheme)
-(require 'init-packages)
 ;; ----------------------------------------macos
 (require 'kbd-macros)
+(use-package magit
+  :bind (("C-x g" . magit)))
 
  (setq package-selected-packages my/packages)
  (defun my/packages-installed-p ()
@@ -146,7 +148,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(use-package rime better-defaults))
+ '(package-selected-packages '(magit use-package rime better-defaults))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(transient-mark-mode nil))
