@@ -1,10 +1,13 @@
 ;;(package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
-
 (require 'init-packages)
+
+(require 'init-scheme)
 ;; ----------------------------------------macos
 (require 'kbd-macros)
+(use-package magit
+  :bind (("C-x g" . magit)))
 
  (setq package-selected-packages my/packages)
  (defun my/packages-installed-p ()
@@ -69,8 +72,6 @@
 (tool-bar-mode -1)
 ;; 关闭文件滑动控件
 (scroll-bar-mode -1)
-;; 显示行号
-(global-linum-mode 1)
 ;;更改光标样式
 ;; (setq cursor-type 'bar)
 ;; 全局而不是局部修改
@@ -84,9 +85,10 @@
 ;; 快速打开配置文件
 (defun open-init-file()
   (interactive)
+  (setq-default display-line-numbers 'relative)
   (find-file "~/.emacs.d/init.el"))
-;; 将open-init-file绑定到<f5>上
-(global-set-key (kbd "<f5>") 'open-init-file)
+;; 将open-init-file绑定到<f9>上
+;;(global-set-key (kbd "<f9>") 'open-init-file)
 ;; 开启全局Company补全
 (global-company-mode 1)
 ;; 关闭自动生成备份文件
@@ -146,7 +148,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(use-package rime better-defaults))
+ '(package-selected-packages '(magit use-package rime better-defaults))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(transient-mark-mode nil))
@@ -156,3 +158,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Consolas" :foundry "MS  " :slant normal :weight normal :height 105 :width normal)))))
+;; 显示行号
+(global-display-line-numbers-mode)
+(setq display-line-numbers-type 'relative)
+(setq-default display-line-numbers-type 'relative)
+
