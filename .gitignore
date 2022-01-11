@@ -2,9 +2,12 @@
 temp-dir
 elpa
 rime
+auto-save-list
+transient
 // 忽略文件
 temp.json
 // 忽略文件夹下所有目录
 temp/*
 // 忽略文件夹下某个文件类型
 temp/*.css
+
