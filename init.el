@@ -111,7 +111,7 @@
 ;;安装主题
 (add-to-list 'my/packages 'dracula-theme)
 (add-to-list 'my/packages 'monokai-theme)
-(load-theme 'dracula 1)
+(load-theme 'monokai 1)
 ;;设置js2-mode
 (setq auto-mode-alist
       (append
