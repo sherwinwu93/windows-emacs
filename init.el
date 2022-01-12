@@ -28,6 +28,7 @@
 ;; setq-default等价于Esc x set-variable 
 (setq-default major-mode 'text-mode)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
+(setq-default fill-column 100)
 ;; 自动启用临时标记模式
 (setq-default transient-mark-mode nil)
 ;; 解决控制问题
