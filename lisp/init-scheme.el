@@ -10,8 +10,10 @@
 (global-set-key (kbd "<f6>") 'open-mit-scheme)
 (defun move-end-$-exec-it()
   (interactive)
-  (execute-kbd-macro (kbd "C-e"))
+  (execute-kbd-macro (kbd "<escape>"))
+  (execute-kbd-macro (kbd "A"))
   (execute-kbd-macro (kbd "C-x C-e"))
+  (execute-kbd-macro (kbd "<escape>"))
 )
 (global-set-key (kbd "<f5>") 'move-end-$-exec-it)
 

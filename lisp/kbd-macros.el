@@ -3,4 +3,8 @@
 (fset 'sc
    (kmacro-lambda-form [?\C-x ?o ?\C-x ?b ?* ?s ?c ?h ?e ?m ?e ?* return ?\C-x ?o] 0 "%d"))
 
+(defun open-kbd-macro-config()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/kbd-macros.el"))
+
 (provide 'kbd-macros)

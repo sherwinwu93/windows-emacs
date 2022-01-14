@@ -31,6 +31,7 @@
 (evil-leader/set-key
  "d" 'dired
  "ff" 'find-file
+ "fs" 'save-buffer
  "fr" 'dired-do-rename
  "bb" 'switch-to-buffer
  ;; 需要设置window-numbering生效
@@ -44,6 +45,12 @@
  ":" 'counset-M-x
  "wm" 'delete-other-windows
  "g" 'magit-status
+ "kn" 'name-last-kbd-macro
+ "ki" 'insert-kbd-macro
+ "ko" 'open-kbd-macro-config
 )
+(defun open-evil-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-evil.el"))
 
 (provide 'init-evil)
