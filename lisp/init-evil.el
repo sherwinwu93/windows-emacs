@@ -1,9 +1,9 @@
-(use- evil)
-(use- evil-leader)
-(use- window-numbering)
-(use- evil-surround)
-(use- evil-nerd-commenter)
-(use- which-key)
+(use-package evil)
+(use-package evil-leader)
+(use-package window-numbering)
+(use-package evil-surround)
+(use-package evil-nerd-commenter)
+(use-package which-key)
 ;; 激活evil的leaderKey
 (global-evil-leader-mode)
 ;; 开启evil模式
