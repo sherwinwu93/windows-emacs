@@ -7,13 +7,13 @@
   (run-scheme "scheme --heap 512")
   (execute-kbd-macro (kbd "C-X o"))
 )
-(global-set-key (kbd "<f5>") 'open-mit-scheme)
+(global-set-key (kbd "<f6>") 'open-mit-scheme)
 (defun move-end-$-exec-it()
   (interactive)
   (execute-kbd-macro (kbd "C-e"))
   (execute-kbd-macro (kbd "C-x C-e"))
 )
-(global-set-key (kbd "<f6>") 'move-end-$-exec-it)
+(global-set-key (kbd "<f5>") 'move-end-$-exec-it)
 
 
 
