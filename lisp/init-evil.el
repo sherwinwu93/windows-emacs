@@ -29,17 +29,21 @@
 (evil-leader/set-leader "<SPC>")
 ;; evil leaderKey
 (evil-leader/set-key
+ "d" 'dired
  "ff" 'find-file
+ "fr" 'dired-do-rename
  "bb" 'switch-to-buffer
  ;; 需要设置window-numbering生效
  "0" 'select-window-0
  "1" 'select-window-1
  "2" 'select-window-2
- "3" 'select-window-2
+ "3" 'select-window-3
+ "4" 'select-window-4
  "w/" 'split-window-right
  "w-" 'split-window-below
  ":" 'counset-M-x
- "wM" 'delete-other-windows
+ "wm" 'delete-other-windows
+ "g" 'magit-status
 )
 
 (provide 'init-evil)
