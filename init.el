@@ -1,30 +1,16 @@
 ;;(package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+;; ----------------------------------------包管理.放最上面
 (require 'init-packages)
-
+(require 'init-evil)
 (require 'init-scheme)
 ;; ----------------------------------------macos
 (require 'kbd-macros)
 (require 'init-base)
+;; (require 'init-evil)
 (use-package magit
   :bind (("C-x g" . magit)))
-
- (setq package-selected-packages my/packages)
- (defun my/packages-installed-p ()
-     (loop for pkg in my/packages
-	   when (not (package-installed-p pkg)) do (return nil)
-	   finally (return t)))
- (unless (my/packages-installed-p)
-     (message "%s" "Refreshing package database...")
-     (package-refresh-contents)
-     (dolist (pkg my/packages)
-       (when (not (package-installed-p pkg))
-	 (package-install pkg))))
- ;; Find Executable Path on OS X
- (when (memq window-system '(mac ns))
-   (exec-path-from-shell-initialize))
-
 ;; 自动启用文本模式和自动换行模式
 ;; setq-default等价于Esc x set-variable 
 (setq-default major-mode 'text-mode)
@@ -157,7 +143,7 @@
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(transient-mark-mode nil))
-;; 显示行号
+;; 显示相对行号
 (global-display-line-numbers-mode)
 (setq display-line-numbers-type 'relative)
 (setq-default display-line-numbers-type 'relative)
