@@ -6,6 +6,7 @@
 (require 'init-scheme)
 ;; ----------------------------------------macos
 (require 'kbd-macros)
+(require 'init-base)
 (use-package magit
   :bind (("C-x g" . magit)))
 
@@ -111,6 +112,7 @@
 ;;安装主题
 (add-to-list 'my/packages 'dracula-theme)
 (add-to-list 'my/packages 'monokai-theme)
+;; (add-to-list 'my/packages 'spacemacs-dark-theme)
 (load-theme 'monokai 1)
 ;;设置js2-mode
 (setq auto-mode-alist
@@ -158,9 +160,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Consolas" :foundry "MS  " :slant normal :weight normal :height 105 :width normal)))))
+ ;; '(default ((t (:family "Consolas" :foundry "MS  " :slant normal :weight normal :height 105 :width normal))))
+)
 ;; 显示行号
 (global-display-line-numbers-mode)
 (setq display-line-numbers-type 'relative)
 (setq-default display-line-numbers-type 'relative)
-
