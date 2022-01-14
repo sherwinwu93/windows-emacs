@@ -25,9 +25,11 @@
 		monokai-theme
 		zenburn-theme
 		dracula-theme
+		spacemacs-theme
 		;; solarized-theme
 		;; rime
 		use-package
+		cnfonts
 		posframe
 		) "Default packages")
 (provide 'init-packages)
