@@ -29,25 +29,31 @@
 (evil-leader/set-leader "<SPC>")
 ;; evil leaderKey
 (evil-leader/set-key
+  ;; file
  "d" 'dired
  "ff" 'find-file
- "fs" 'save-buffer
  "fr" 'dired-do-rename
+ ;; buffer
  "bb" 'switch-to-buffer
+ "bl" 'list-buffers
  ;; 需要设置window-numbering生效
- "0" 'select-window-0
+ ;; "0" 'select-window-0
+ ;; window
  "1" 'select-window-1
  "2" 'select-window-2
  "3" 'select-window-3
  "4" 'select-window-4
- "w/" 'split-window-right
- "w-" 'split-window-below
+ "w0" 'delete-window
+ "w1" 'delete-other-windows
+ "w2" 'split-window-below
+ "w3" 'split-window-right
  ":" 'counset-M-x
- "wm" 'delete-other-windows
+ ;; git
  "g" 'magit-status
- "kn" 'name-last-kbd-macro
- "ki" 'insert-kbd-macro
- "ko" 'open-kbd-macro-config
+ ;; macro
+ "mn" 'name-last-kbd-macro
+ "mi" 'insert-kbd-macro
+ "mo" 'open-kbd-macro-config
 )
 (defun open-evil-file()
   (interactive)
