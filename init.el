@@ -65,7 +65,7 @@
 ;; 全局而不是局部修改
 (setq-default cursor-type 'bar)
 ;; 关闭启动帮助画面
-;;(setq inhibit-splash-screen 1)
+(setq inhibit-splash-screen 1)
 ;; 关闭缩进
 (electric-indent-mode -1)
 ;;更改显示字体大小
