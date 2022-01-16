@@ -32,6 +32,7 @@
   ;; file
  "d" 'dired
  "ff" 'find-file
+ "fs" 'save-buffer
  "fr" 'dired-do-rename
  ;; buffer
  "bb" 'switch-to-buffer
