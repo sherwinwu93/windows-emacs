@@ -1,6 +1,5 @@
 (defun open-init-file()
   (interactive)
-  (setq-default display-line-numbers 'relative)
   (find-file "~/.emacs.d/init.el"))
 (defun find-emacs-lisp-file(relative-path)
   (interactive)
