@@ -4,18 +4,58 @@
 (use-package evil-surround)
 (use-package evil-nerd-commenter)
 (use-package which-key)
+;; evil leaderKey
+(evil-leader/set-key
+  ;; file
+  "d" 'dired
+  "ff" 'find-file
+  "fr" 'recentf-open-files
+  "fs" 'save-buffer
+  "fr" 'dired-do-rename
+  ;; buffer
+  "bb" 'switch-to-buffer
+  "bl" 'list-buffers
+  "bk" 'kill-buffer
+  ;; window
+  ;; 需要设置window-numbering生效
+  "o" 'other-window
+  "0" 'select-window-0
+  "1" 'select-window-1
+  "2" 'select-window-2
+  "3" 'select-window-3
+  "4" 'select-window-4
+  "w0" 'delete-window
+  "w1" 'delete-other-windows
+  "w2" 'split-window-below
+  "w3" 'split-window-right
+  ":" 'counset-M-x
+  ;; git
+  "g" 'magit-status
+  ;; macro
+  "mn" 'name-last-kbd-macro
+  "mi" 'insert-kbd-macro
+  "mo" 'open-kbd-macro-config
+  )
+
+;; 显示相对行号
+(global-display-line-numbers-mode)
+(setq display-line-numbers-type 'relative)
+(setq-default display-line-numbers-type 'relative)
+
 ;; 激活evil的leaderKey
 (global-evil-leader-mode)
 ;; 开启evil模式
 (evil-mode 1)
-;; 清空evil insert模式的map
-(setcdr evil-insert-state-map nil)
-(define-key evil-insert-state-map [escape] 'evil-normal-state)
-
 ;; window-numbering
 (window-numbering-mode 1)
 
-;; 快速匹配,选中区域同时增加括号
+(evil-leader/set-leader "<SPC>")
+
+;; 清空evil insert模式的map,使用默认
+(setcdr evil-insert-state-map nil)
+(define-key evil-insert-state-map [escape] 'evil-normal-state)
+
+;; 选中区域S(增加括号
 (global-evil-surround-mode)
 
 ;;快速注释
@@ -23,41 +63,10 @@
 (define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
 (define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
 
-;; which-key 
+;; which-key
 (which-key-mode 1)
 
-(evil-leader/set-leader "<SPC>")
-(defun open-evil-file()
-  (interactive)
-  (find-file "~/.emacs.d/lisp/init-evil.el"))
-;; evil leaderKey
-(evil-leader/set-key
-  ;; file
- "d" 'dired
- "ff" 'find-file
- "fs" 'save-buffer
- "fr" 'dired-do-rename
- ;; buffer
- "bb" 'switch-to-buffer
- "bl" 'list-buffers
- ;; 需要设置window-numbering生效
- ;; "0" 'select-window-0
- ;; window
- "1" 'select-window-1
- "2" 'select-window-2
- "3" 'select-window-3
- "4" 'select-window-4
- "w0" 'delete-window
- "w1" 'delete-other-windows
- "w2" 'split-window-below
- "w3" 'split-window-right
- ":" 'counset-M-x
- ;; git
- "g" 'magit-status
- ;; macro
- "mn" 'name-last-kbd-macro
- "mi" 'insert-kbd-macro
- "mo" 'open-kbd-macro-config
-)
+
+
 
 (provide 'init-evil)
