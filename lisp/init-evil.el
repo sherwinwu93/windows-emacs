@@ -39,8 +39,6 @@
   "mi" 'insert-kbd-macro
   "mo" 'open-kbd-macro-config
   ;; abbrev
-  "aig" 'inverse-add-global-abbrev
-  "ail" 'inverse-add-mode-abbrev
   "ae" 'edit-abbrevs
   "as" 'write-abbrev-file
   )
