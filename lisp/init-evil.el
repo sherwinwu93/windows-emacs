@@ -38,6 +38,11 @@
   "mn" 'name-last-kbd-macro
   "mi" 'insert-kbd-macro
   "mo" 'open-kbd-macro-config
+  ;; abbrev
+  "aig" 'inverse-add-global-abbrev
+  "ail" 'inverse-add-mode-abbrev
+  "ae" 'edit-abbrevs
+  "as" 'write-abbrev-file
   )
 
 ;; 显示相对行号

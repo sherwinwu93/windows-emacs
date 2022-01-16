@@ -10,7 +10,7 @@
 (require 'init-kbd-macros)
 (require 'init-save)
 (require 'init-vc)
-(require 'init-abbrev)
+(require 'init-query-replace)
 (require 'init-input)
 (require 'init-org)
 (require 'init-open-file)
