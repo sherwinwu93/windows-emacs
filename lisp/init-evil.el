@@ -6,12 +6,12 @@
 (use-package which-key)
 ;; evil leaderKey
 (evil-leader/set-key
+  ":" 'counset-M-x
   ;; file
   "d" 'dired
   "ff" 'find-file
   "fr" 'recentf-open-files
   "fs" 'save-buffer
-  "fr" 'dired-do-rename
   ;; buffer
   "bb" 'switch-to-buffer
   "bl" 'list-buffers
@@ -28,7 +28,10 @@
   "w1" 'delete-other-windows
   "w2" 'split-window-below
   "w3" 'split-window-right
-  ":" 'counset-M-x
+  ;; bookmarks
+  "mst" 'bookmark-set
+  "msv" 'bookmark-save
+  "me" 'edit-bookmarks
   ;; git
   "g" 'magit-status
   ;; macro

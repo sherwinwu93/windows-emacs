@@ -5,6 +5,8 @@
 ;;(enable-flow-control)
 ;;设置hook,自动括号匹配
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+;; yes no -> y n
+(fset 'yes-or-no-p 'y-or-n-p)
 
 
 ;; ----------------------------------------编辑模式
