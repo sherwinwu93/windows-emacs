@@ -27,6 +27,9 @@
 (which-key-mode 1)
 
 (evil-leader/set-leader "<SPC>")
+(defun open-evil-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-evil.el"))
 ;; evil leaderKey
 (evil-leader/set-key
   ;; file
@@ -48,6 +51,7 @@
  "w1" 'delete-other-windows
  "w2" 'split-window-below
  "w3" 'split-window-right
+ "w0" 'other-window
  ":" 'counset-M-x
  ;; git
  "g" 'magit-status
@@ -56,8 +60,5 @@
  "mi" 'insert-kbd-macro
  "mo" 'open-kbd-macro-config
 )
-(defun open-evil-file()
-  (interactive)
-  (find-file "~/.emacs.d/lisp/init-evil.el"))
 
 (provide 'init-evil)
