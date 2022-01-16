@@ -51,7 +51,6 @@
  "w1" 'delete-other-windows
  "w2" 'split-window-below
  "w3" 'split-window-right
- "w0" 'other-window
  ":" 'counset-M-x
  ;; git
  "g" 'magit-status
