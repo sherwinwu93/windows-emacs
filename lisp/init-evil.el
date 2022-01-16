@@ -39,13 +39,13 @@
   "mi" 'insert-kbd-macro
   "mo" 'open-kbd-macro-config
   ;; abbrev
+  "ail" 'inverse-add-mode-abbrev
   "ae" 'edit-abbrevs
   "as" 'write-abbrev-file
   )
 
 ;; 显示相对行号
 (global-display-line-numbers-mode)
-(setq display-line-numbers-type 'relative)
 (setq-default display-line-numbers-type 'relative)
 
 ;; 激活evil的leaderKey
