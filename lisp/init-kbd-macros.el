@@ -1,0 +1,10 @@
+(fset '<s
+   (kmacro-lambda-form [?\C-a ?# ?+ ?B ?E ?I backspace ?G ?I ?N ?_ ?S ?R ?C return ?# ?+ ?E ?N ?D ?_ ?S ?R ?C ?\C-p ?\C-e ? ] 0 "%d"))
+(fset 'sc
+   (kmacro-lambda-form [?\C-x ?o ?\C-x ?b ?* ?s ?c ?h ?e ?m ?e ?* return ?\C-x ?o] 0 "%d"))
+
+(defun open-kbd-macro-config()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/kbd-macros.el"))
+
+(provide 'init-kbd-macros)
