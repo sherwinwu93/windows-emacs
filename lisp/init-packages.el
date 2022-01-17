@@ -2,9 +2,10 @@
 (when (>= emacs-major-version 24)
    (require 'package)
    (package-initialize)
-     (setq package-archives '(("gnu" . "http://mirrors.ustc.edu.cn/elpa/gnu/")
-                              ("melpa" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
-                              ("org" . "http://mirrors.ustc.edu.cn/elpa/org/"))))
+     (setq package-archives '(("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+	                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+	                         ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+			      )))
 ;; cl - Common Lisp Extension
 (require 'cl)
 ;; 包名列表
@@ -17,8 +18,10 @@
 		      swiper
 		      counsel
 		      smartparens
+		      popwin
 		      ;; --- Major Mode ---
 		      js2-mode
+		      web-mode
 		      ;; --- Minor Mode ---
 		      nodejs-repl
 		      exec-path-from-shell
@@ -34,6 +37,8 @@
 		      posframe
 		      ;; --- vc ---
 		      magit
+		      ;; --- dired ---
+		      dired-x
 		      ;; --- evil ---
 		      evil
 		      evil-leader

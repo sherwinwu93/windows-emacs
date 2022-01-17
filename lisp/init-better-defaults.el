@@ -7,33 +7,22 @@
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 ;; yes no -> y n
 (fset 'yes-or-no-p 'y-or-n-p)
+;; ----------------------------------------改按键
 
-
-;; ----------------------------------------编辑模式
-;; 默认文本模式模式
-(setq-default major-mode 'text-mode)
-;; 换行模式
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
-;; 启动ada-mode时,加载ada
-;; (auto-load 'ada-mode "ada")
-;; 打开文件自动匹配mode
-(setq auto-mode-alist
-      (append
-       '(("\\.js\\'" . js2-mode))
-       auto-mode-alist))
+;; ----------------------------------------帮助
 
 
 ;; ----------------------------------------Emacs画面
 ;; 关闭启动帮助画面
 (setq inhibit-splash-screen 1)
-;; 关闭菜单栏
-(menu-bar-mode -1)
 ;; 关闭工具栏
 (tool-bar-mode -1)
-;; 括号模式
-(show-paren-mode 1)
+;; 关闭菜单栏
+(menu-bar-mode -1)
 ;; 关闭文件滑动控件
 (scroll-bar-mode -1)
+;; 括号模式
+(show-paren-mode 1)
 ;; 高亮当前行
 (global-hl-line-mode 1)
 ;;设置Emacs默认全屏
@@ -55,6 +44,8 @@
 ;; ----------------------------------------文件
 ;; 更改默认目录
 (setq default-directory "~/")
+;; 外界修改过文件,自动加载
+(global-auto-revert-mode 1)
 ;; 关闭生成init.el~文件
 (setq make-backup-files nil)
 ;; 关闭auto-save目录的文件
@@ -74,13 +65,16 @@
 ;; 选中时输入替换
 (delete-selection-mode 1)
 ;; 关闭缩进
-(electric-indent-mode -1)
+;; (electric-indent-mode -1)
 ;; 开启全局Company补全
 (global-company-mode 1)
 ;;选中输入时,替换而不是增加
 (delete-selection-mode 1)
 
 
+;; ----------------------------------------window`buffer
+(require 'popwin)
+(popwin-mode 1)
 
 
 
