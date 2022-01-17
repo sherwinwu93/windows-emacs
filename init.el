@@ -1,7 +1,12 @@
 ;;(package-initialize)
+;; 递归遍历加载路径
+(defun add-subdirs-to-load-path(dir)
+  "Recursive add directories to `load-path`"
+  (let ((default-directory (file-name-as-directory dir)))
+    (add-to-list 'load-path dir)
+    (normal-top-level-add-subdirs-to-load-path)))
 
-(add-to-list 'load-path "~/.emacs.d/lisp/")
-(normal-top-level-add-subdirs-to-load-path)
+(add-subdirs-to-load-path "~/.emacs.d/lisp/")
 ;; ----------------------------------------包管理.放最上面
 (require 'init-packages)
 (require 'init-evil)
