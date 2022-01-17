@@ -1,66 +1,24 @@
 ;; ----------------------------------------配置插件源
-(when (>= emacs-major-version 24)
-   (require 'package)
-   (package-initialize)
-     (setq package-archives '(("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-	                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-	                         ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-			      )))
-;; cl - Common Lisp Extension
-(require 'cl)
-;; 包名列表
-(defvar my/packages '(
-		      use-package
-		      ;; --- Auto-completion ---
-		      company
-		      ;; --- Better Editor ---
-		      hungry-delete
-		      swiper
-		      counsel
-		      smartparens
-		      popwin
-		      ;; --- Major Mode ---
-		      js2-mode
-		      web-mode
-		      ;; --- Minor Mode ---
-		      nodejs-repl
-		      exec-path-from-shell
-		      ;; --- Themes ---
-		      monokai-theme
-		      zenburn-theme
-		      dracula-theme
-		      spacemacs-theme
-		      ;; solarized-theme
-		      ;; --- input ---
-		      ;; rime
-		      cnfonts
-		      posframe
-		      ;; --- vc ---
-		      magit
-		      ;; --- dired ---
-		      dired-x
-		      ;; --- evil ---
-		      evil
-		      evil-leader
-		      window-numbering
-		      evil-surround
-		      evil-nerd-commenter
-		      which-key
-		      ) "Default packages")
+(require 'package)
+(package-initialize)
+(setq package-archives '(("gnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+	                 ("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+	                 ("org" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
+;; 如果 use-package 没安装
+(unless (package-installed-p 'use-package)
+	;; 更新本地缓存
+	(package-refresh-contents)
+	;; 之后安装它。use-package 应该是你配置中唯一一个需要这样安装的包。
+	(package-install 'use-package))
+;; 让 use-package 永远按需安装软件包
+(setq use-package-always-ensure t)
 
-(setq package-selected-packages my/packages)
-(defun my/packages-installed-p ()
-  (loop for pkg in my/packages
-	when (not (package-installed-p pkg)) do (return nil)
-	finally (return t)))
-(unless (my/packages-installed-p)
-  (message "%s" "Refreshing package database...")
-  (package-refresh-contents)
-  (dolist (pkg my/packages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
-;; Find Executable Path on OS X
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
+;; --- Auto-completion ---
+(use-package company)
+;; --- Better Editor ---
+;; --- Minor Mode ---
+(use-package nodejs-repl)
+(use-package exec-path-from-shell)
+
 
 (provide 'init-packages)

@@ -1,3 +1,8 @@
+(use-package hungry-delete)
+(use-package swiper)
+(use-package counsel)
+(use-package smartparens)
+(use-package popwin)
 ;; ----------------------------------------其他
 ;; 关闭按键提示功能
 (setq suggest-key-bindings nil)
@@ -30,9 +35,7 @@
 ;; 更改光标样式,全局而不是局部修改
 (setq-default cursor-type 'bar)
 ;; ----------主题
-(add-to-list 'my/packages 'dracula-theme)
-(add-to-list 'my/packages 'monokai-theme)
-(add-to-list 'my/packages 'spacemacs-dark-theme)
+(use-package spacemacs-dark-theme)
 (load-theme 'spacemacs-dark 1)
 ;; ----------字体
 ;; 字体大小

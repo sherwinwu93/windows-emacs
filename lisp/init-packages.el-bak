@@ -1,0 +1,63 @@
+;; ----------------------------------------配置插件源
+(require 'package)
+(package-initialize)
+(setq package-archives '(("gnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+	                 ("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+	                 ("org" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
+;; cl - Common Lisp Extension
+(require 'cl)
+;; 包名列表
+(defvar my/packages '(
+		      use-package
+		      ;; --- Auto-completion ---
+		      company
+		      ;; --- Better Editor ---
+		      hungry-delete
+		      swiper
+		      counsel
+		      smartparens
+		      popwin
+		      ;; --- Major Mode ---
+		      js2-mode
+		      web-mode
+		      ;; --- Minor Mode ---
+		      nodejs-repl
+		      exec-path-from-shell
+		      ;; --- Themes ---
+		      monokai-theme
+		      zenburn-theme
+		      dracula-theme
+		      spacemacs-theme
+		      ;; solarized-theme
+		      ;; --- input ---
+		      ;; rime
+		      cnfonts
+		      posframe
+		      ;; --- vc ---
+		      magit
+		      ;; --- dired ---
+		      ;; --- evil ---
+		      evil
+		      evil-leader
+		      window-numbering
+		      evil-surround
+		      evil-nerd-commenter
+		      which-key
+		      ) "Default packages")
+
+(setq package-selected-packages my/packages)
+(defun my/packages-installed-p ()
+  (loop for pkg in my/packages
+	when (not (package-installed-p pkg)) do (return nil)
+	finally (return t)))
+(unless (my/packages-installed-p)
+  (message "%s" "Refreshing package database...")
+  (package-refresh-contents)
+  (dolist (pkg my/packages)
+    (when (not (package-installed-p pkg))
+      (package-install pkg))))
+;; Find Executable Path on OS X
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
+(provide 'init-packages)

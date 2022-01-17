@@ -1,4 +1,5 @@
-(require 'js2-mode)
+(use-package js2-mode)
+(use-package web-mode)
 (setq auto-mode-alist
       (append
        '(("\\.js\\'" . js2-mode))

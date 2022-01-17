@@ -1,8 +1,5 @@
-;; rime输入法
-(require 'posframe)
-;; 让 use-package 永远按需安装软件包
-(setq use-package-always-ensure t)
-
+(use-package cnfonts)
+(use-package posframe)
 ;; 之后就可以使用它了。
 ;; 要使用简体中文，记得修改defualt.yml
 (use-package rime
