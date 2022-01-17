@@ -4,7 +4,8 @@
 (use-package smartparens)
 (use-package popwin)
 (use-package company)
-(use-package spacemacs-theme)
+;; 初始化时打开
+;;(use-package spacemacs-theme)
 (require 'recentf)
 (require 'auto-save)
 ;; ----------------------------------------其他
