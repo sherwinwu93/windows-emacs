@@ -52,10 +52,10 @@
 ;; 关闭生成init.el~文件
 (setq make-backup-files nil)
 ;; 关闭auto-save目录的文件
-;;(setq auto-save-default nil)
+(setq auto-save-default nil)
 ;; --------------------最近打开
 ;; 从文件中加载特性
-(require 'recentf)
+(use-package recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-item 10)
 (global-set-key (kbd "C-x C-r") 'recentf-open-files)
@@ -73,10 +73,25 @@
 (global-company-mode 1)
 ;;选中输入时,替换而不是增加
 (delete-selection-mode 1)
+;; --------------------文件自动保存
+(use-package auto-save)
+(auto-save-enable)
+
+(setq auto-save-silent t)   ; quietly save
+(setq auto-save-delete-trailing-whitespace t)  ; automatically delete spaces at the end of the line when saving
+
+;;; custom predicates if you don't want auto save.
+;;; disable auto save mode when current filetype is an gpg file.
+(setq auto-save-disable-predicates
+      '((lambda ()
+      (string-suffix-p
+      "gpg"
+      (file-name-extension (buffer-name)) t))))
+
 
 
 ;; ----------------------------------------window`buffer
-(require 'popwin)
+(use-package popwin)
 (popwin-mode 1)
 
 

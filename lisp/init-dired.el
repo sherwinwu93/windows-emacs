@@ -3,7 +3,7 @@
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 ;; C-x C-j进入当前目录
-(require 'dired-x)
+(use-package dired-x)
 
 
 

@@ -13,12 +13,6 @@
 ;; 让 use-package 永远按需安装软件包
 (setq use-package-always-ensure t)
 
-;; --- Auto-completion ---
-(use-package company)
-;; --- Better Editor ---
-;; --- Minor Mode ---
-(use-package nodejs-repl)
-(use-package exec-path-from-shell)
 
 
 (provide 'init-packages)

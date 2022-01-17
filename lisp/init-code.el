@@ -20,7 +20,8 @@
 	(message "Indent buffer.")))))
 (global-set-key (kbd "C-M-l") 'indent-region-or-buffer)
 ;; --------------------代码补全
-(set-default abbrev-mode t)
+(use-package company)
+(setq-default abbrev-mode t)
 (define-abbrev-table 'global-abbrev-table '(
 					    ("wusd" "wushengdong" nil :count 11)
 					    ("lij" "lijie")
@@ -48,3 +49,5 @@
 	(t (save-excursion
 	     (ignore-errors (backward-up-list))
 	     (funcall fn)))))
+
+(provide 'init-code)
