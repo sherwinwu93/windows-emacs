@@ -91,7 +91,6 @@
 
 
 ;; ----------------------------------------window`buffer
-(use-package popwin)
 (popwin-mode 1)
 
 
