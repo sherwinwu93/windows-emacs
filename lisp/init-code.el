@@ -1,3 +1,4 @@
+(use-package company)
 ;; ----------------------------------------查找和替换
 ;; 设置查询不区分大小写: t不区分,nil区分
 (setq-default case-fold-search t)
@@ -20,7 +21,6 @@
 	(message "Indent buffer.")))))
 (global-set-key (kbd "C-M-l") 'indent-region-or-buffer)
 ;; --------------------代码补全
-(use-package company)
 (setq-default abbrev-mode t)
 (define-abbrev-table 'global-abbrev-table '(
 					    ("wusd" "wushengdong" nil :count 11)

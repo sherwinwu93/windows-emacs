@@ -3,6 +3,10 @@
 (use-package counsel)
 (use-package smartparens)
 (use-package popwin)
+(use-package company)
+(use-package spacemacs-theme)
+(require 'recentf)
+(require 'auto-save)
 ;; ----------------------------------------其他
 ;; 关闭按键提示功能
 (setq suggest-key-bindings nil)
@@ -35,7 +39,6 @@
 ;; 更改光标样式,全局而不是局部修改
 (setq-default cursor-type 'bar)
 ;; ----------主题
-(use-package spacemacs-dark-theme)
 (load-theme 'spacemacs-dark 1)
 ;; ----------字体
 ;; 字体大小
@@ -55,7 +58,6 @@
 (setq auto-save-default nil)
 ;; --------------------最近打开
 ;; 从文件中加载特性
-(use-package recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-item 10)
 (global-set-key (kbd "C-x C-r") 'recentf-open-files)
@@ -74,7 +76,6 @@
 ;;选中输入时,替换而不是增加
 (delete-selection-mode 1)
 ;; --------------------文件自动保存
-(use-package auto-save)
 (auto-save-enable)
 
 (setq auto-save-silent t)   ; quietly save

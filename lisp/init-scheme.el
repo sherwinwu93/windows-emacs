@@ -1,4 +1,4 @@
-(use-package xscheme)
+(require 'xscheme)
 (setq scheme-program-name "/usr/local/bin/mit-scheme --stack 10000")
 (defun open-mit-scheme()
   (interactive)
