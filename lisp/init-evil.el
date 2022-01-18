@@ -48,6 +48,8 @@
   "au" 'unexpand-abbrev
   "ae" 'edit-abbrevs
   "as" 'write-abbrev-file
+  ;; project
+  "pt" 'neotree-toggle
   )
 
 ;; 显示相对行号
