@@ -50,6 +50,7 @@
   "as" 'write-abbrev-file
   ;; project
   "pt" 'neotree-toggle
+  "pr" 'neotree-refresh
   )
 
 ;; 显示相对行号
