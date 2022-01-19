@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("init-evil.el"
+(("learning-emacs-3rd.org"
+ (filename . "~/codes/notes/emacs/learning-emacs-3rd.org")
+ (front-context-string . "e with Bookmarks")
+ (rear-context-string . "olding Your Plac")
+ (position . 747))
+("init-evil.el"
  (filename . "~/.emacs.d/lisp/init-evil.el")
  (front-context-string . "t\n  ;; git\n  \"g\"")
  (rear-context-string . "ms\" 'bookmark-se")

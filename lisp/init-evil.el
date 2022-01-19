@@ -32,6 +32,11 @@
   "w1" 'delete-other-windows
   "w2" 'split-window-below
   "w3" 'split-window-right
+  ;; frame
+  "wf0" 'delete-frame
+  "wfo" 'other-frame
+  "wf2" 'make-frame
+  "wff" 'find-file-other-frame
   ;; bookmarks
   "mst" 'bookmark-set
   "msv" 'bookmark-save
