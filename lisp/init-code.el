@@ -22,14 +22,7 @@
 (global-set-key (kbd "C-M-l") 'indent-region-or-buffer)
 ;; --------------------代码补全
 (setq-default abbrev-mode t)
-(define-abbrev-table 'global-abbrev-table '(
-					    ("wusd" "wushengdong" nil :count 11)
-					    ("lij" "lijie")
-					    ))
-(define-abbrev-table 'org-mode-abbrev-table
-  '(
-    ("ail" "add-inverse-local" nil :count 1)
-   ))
+(read-abbrev-file "~/.emacs.d/abbrev_defs")
 ;; --------------------Hippie补全
 ;; 'hippie-expand
 (setq hippie-expand-try-function-list '(try-expand-debbrev
