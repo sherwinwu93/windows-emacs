@@ -13,10 +13,11 @@
     ("else" "else" c-electric-continued-statement :count 0)
     ("finally" "finally" c-electric-continued-statement :count 0)
     ("while" "while" c-electric-continued-statement :count 0)
+    ("lij" "lijie" nil :count 0)
+    ("wusd" "wushengdong" nil :count 11)
    ))
 
 (define-abbrev-table 'org-mode-abbrev-table
   '(
     ("ail" "add-inverse-local" nil :count 1)
    ))
-
