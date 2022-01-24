@@ -6,7 +6,7 @@
 (use-package which-key)
 ;; evil leaderKey
 (evil-leader/set-key
-  "I" 'string-insert-rectangle
+  "i" 'string-insert-rectangle
   ":" 'counset-M-x
   ;; file
   "d" 'dired
