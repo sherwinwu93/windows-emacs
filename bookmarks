@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("learning-emacs-3rd.org"
+(("p70-map.scm"
+ (filename . "~/codes/sicp/src/c02/p70-map.scm")
+ (front-context-string)
+ (rear-context-string . "s)))))\n;; 多参数实现\n")
+ (position . 318))
+("learning-emacs-3rd.org"
  (filename . "~/codes/notes/emacs/learning-emacs-3rd.org")
  (front-context-string . "e with Bookmarks")
  (rear-context-string . "olding Your Plac")
