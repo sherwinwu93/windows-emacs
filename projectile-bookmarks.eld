@@ -1,0 +1,1 @@
+("~/.emacs.d/" "~/localcodes/sicp/" "/mnt/d/git-code/notes/")

@@ -22,6 +22,7 @@
 (require 'init-shell)
 (require 'init-input)
 ;; ----------------------------------------语言
+(require 'init-translate)
 (require 'init-scheme)
 (require 'init-js)
 (require 'init-project)
@@ -31,7 +32,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(neotree projectile web-mode rime posframe cnfonts magit spacemacs-theme window-numbering which-key use-package smartparens popwin nodejs-repl monokai-theme js2-mode hungry-delete exec-path-from-shell evil-surround evil-nerd-commenter evil-leader counsel company)))
+   '(google-translate jdee neotree projectile web-mode rime posframe cnfonts magit spacemacs-theme window-numbering which-key use-package smartparens popwin nodejs-repl monokai-theme js2-mode hungry-delete exec-path-from-shell evil-surround evil-nerd-commenter evil-leader counsel company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
