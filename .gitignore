@@ -13,3 +13,4 @@ recentf
 temp/*
 // 忽略文件夹下某个文件类型
 temp/*.css
+/projectile-bookmarks.eld
