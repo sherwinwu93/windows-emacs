@@ -25,10 +25,10 @@
   "2" 'select-window-2
   "3" 'select-window-3
   "4" 'select-window-4
-  "6" 'enlarge-window
-  "7" 'shrink-window
-  "[" 'enlarge-window-horizontally
-  "]" 'shrink-window-horizontally
+  "=" 'enlarge-window
+  "-" 'shrink-window
+  "]" 'enlarge-window-horizontally
+  "[" 'shrink-window-horizontally
   "w0" 'delete-window
   "w1" 'delete-other-windows
   "w2" 'split-window-below
