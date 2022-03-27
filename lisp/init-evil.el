@@ -34,9 +34,9 @@
   "w2" 'split-window-below
   "w3" 'split-window-right
   ;; frame
-  "wf0" 'delete-frame
-  "wfo" 'other-frame
-  "wf2" 'make-frame
+  "50" 'delete-frame
+  "5o" 'other-frame
+  "52" 'make-frame
   "wff" 'find-file-other-frame
   ;; bookmarks
   "mst" 'bookmark-set
