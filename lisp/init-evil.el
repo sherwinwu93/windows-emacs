@@ -4,6 +4,9 @@
 (use-package evil-surround)
 (use-package evil-nerd-commenter)
 (use-package which-key)
+;; bookmars
+(global-set-key (kbd "C-b") 'list-bookmarks)
+(global-set-key (kbd "C-i") 'bookmark-set)
 ;; evil leaderKey
 (evil-leader/set-key
   "i" 'string-insert-rectangle
