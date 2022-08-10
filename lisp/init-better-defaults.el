@@ -4,8 +4,15 @@
 (use-package smartparens)
 (use-package popwin)
 (use-package company)
+(when (fboundp 'set-charset-priority)
+    (set-charset-priority 'unicode))
+  (prefer-coding-system 'utf-8)
+  (setq locale-coding-system 'utf-8)
+  (setq system-time-locale "C")
+  (unless (eq system-type 'windows-nt)
+    (set-selection-coding-system 'utf-8))
 ;; 初始化时打开
-;;(use-package spacemacs-theme)
+;; (use-package spacemacs-theme)
 (require 'recentf)
 (require 'auto-save)
 ;; ----------------------------------------其他

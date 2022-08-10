@@ -32,11 +32,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(display-line-numbers-type 'relative)
+ '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(markdown-mode google-translate jdee neotree projectile web-mode rime posframe cnfonts magit spacemacs-theme window-numbering which-key use-package smartparens popwin nodejs-repl monokai-theme js2-mode hungry-delete exec-path-from-shell evil-surround evil-nerd-commenter evil-leader counsel company)))
+   '(markdown-mode google-translate jdee neotree projectile web-mode rime posframe cnfonts magit spacemacs-theme window-numbering which-key use-package smartparens popwin nodejs-repl monokai-theme js2-mode hungry-delete exec-path-from-shell evil-surround evil-nerd-commenter evil-leader counsel company))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil)
+ '(transient-mark-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "Consolas" :foundry "outline" :slant normal :weight normal :height 113 :width normal)))))
