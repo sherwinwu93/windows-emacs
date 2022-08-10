@@ -57,6 +57,8 @@
   ;; project
   "pt" 'neotree-toggle
   "pr" 'neotree-refresh
+  ;; shell
+  "'" 'shell
   )
 
 ;; {{ specify major mode uses Evil (vim) NORMAL state or EMACS original state.
