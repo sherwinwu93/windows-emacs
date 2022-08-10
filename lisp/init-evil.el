@@ -13,10 +13,10 @@
   "ff" 'find-file
   "fr" 'recentf-open-files
   "fs" 'save-buffer
-  ;; buffer
-  "bb" 'switch-to-buffer
-  "bl" 'list-buffers
-  "bk" 'kill-buffer
+  ;; bookmark
+  "bl" 'list-bookmarks
+  "ba" 'bookmark-set
+  "bs" 'bookmark-save
   ;; window
   ;; 需要设置window-numbering生效
   "o" 'other-window
@@ -58,6 +58,46 @@
   "pt" 'neotree-toggle
   "pr" 'neotree-refresh
   )
+
+;; {{ specify major mode uses Evil (vim) NORMAL state or EMACS original state.
+;; You may delete this setup to use Evil NORMAL state always.
+(dolist (p '((minibuffer-inactive-mode . emacs)
+             (calendar-mode . emacs)
+             (special-mode . emacs)
+             (grep-mode . emacs)
+             (Info-mode . emacs)
+             (term-mode . emacs)
+             (sdcv-mode . emacs)
+             (anaconda-nav-mode . emacs)
+             (log-edit-mode . emacs)
+             (vc-log-edit-mode . emacs)
+             (magit-log-edit-mode . emacs)
+             (erc-mode . emacs)
+             (neotree-mode . emacs)
+             (w3m-mode . emacs)
+             (gud-mode . emacs)
+             (help-mode . emacs)
+             (eshell-mode . emacs)
+             (shell-mode . emacs)
+             (xref--xref-buffer-mode . emacs)
+             ;;(message-mode . emacs)
+             (epa-key-list-mode . emacs)
+             (fundamental-mode . emacs)
+             (weibo-timeline-mode . emacs)
+             (weibo-post-mode . emacs)
+             (woman-mode . emacs)
+             (sr-mode . emacs)
+             (profiler-report-mode . emacs)
+             (dired-mode . emacs)
+             (compilation-mode . emacs)
+             (speedbar-mode . emacs)
+             (ivy-occur-mode . emacs)
+             (ffip-file-mode . emacs)
+             (ivy-occur-grep-mode . normal)
+             (messages-buffer-mode . normal)
+             (js2-error-buffer-mode . emacs)))
+  (evil-set-initial-state (car p) (cdr p)))
+;; }}
 
 ;; 显示相对行号
 (global-display-line-numbers-mode)

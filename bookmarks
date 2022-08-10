@@ -2,11 +2,11 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("p70-map.scm"
- (filename . "~/codes/sicp/src/c02/p70-map.scm")
- (front-context-string)
- (rear-context-string . "s)))))\n;; 多参数实现\n")
- (position . 318))
+(("notes"
+ (filename . "d:/git-code/notes/")
+ (front-context-string . "efficient\n  drwx")
+ (rear-context-string . " 0 Aug 10 16:55 ")
+ (position . 206))
 ("learning-emacs-3rd.org"
  (filename . "~/codes/notes/emacs/learning-emacs-3rd.org")
  (front-context-string . "e with Bookmarks")
@@ -14,9 +14,9 @@
  (position . 747))
 ("init-evil.el"
  (filename . "~/.emacs.d/lisp/init-evil.el")
- (front-context-string . "t\n  ;; git\n  \"g\"")
- (rear-context-string . "ms\" 'bookmark-se")
- (position . 725))
+ (front-context-string . ")\n\n;; 显示相对行号\n(gl")
+ (rear-context-string . "otree-refresh\n  ")
+ (position . 1311))
 ("init.el"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)
