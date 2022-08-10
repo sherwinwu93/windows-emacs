@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("notes"
+((".emacs.d"
+ (filename . "~/.emacs.d/")
+ (front-context-string . "abbrev_defs\n  dr")
+ (rear-context-string . "21 Aug 10 16:08 ")
+ (position . 237))
+("notes"
  (filename . "d:/git-code/notes/")
  (front-context-string . "efficient\n  drwx")
  (rear-context-string . " 0 Aug 10 16:55 ")
@@ -14,9 +19,9 @@
  (position . 747))
 ("init-evil.el"
  (filename . "~/.emacs.d/lisp/init-evil.el")
- (front-context-string . ")\n\n;; 显示相对行号\n(gl")
- (rear-context-string . "otree-refresh\n  ")
- (position . 1311))
+ (front-context-string . "0\" 'delete-frame")
+ (rear-context-string . "\n  ;; frame\n  \"5")
+ (position . 827))
 ("init.el"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)

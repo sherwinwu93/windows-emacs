@@ -52,7 +52,7 @@
 ;; 字体大小
 ;;(set-face-attribute 'default nil :height 110)
 ;; 字体行间距
-(setq-default line-spacing 0.1)
+(setq-default line-spacing 0.2)
 
 
 ;; ----------------------------------------文件
