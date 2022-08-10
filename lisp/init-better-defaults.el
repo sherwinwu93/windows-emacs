@@ -5,7 +5,7 @@
 (use-package popwin)
 (use-package company)
 ;; 初始化时打开
-;; (use-package spacemacs-theme)
+;;(use-package spacemacs-theme)
 (require 'recentf)
 (require 'auto-save)
 ;; ----------------------------------------其他
