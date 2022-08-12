@@ -10,6 +10,7 @@
 ;; ----------------------------------------包管理.放最上面
 (require 'init-packages)
 ;; ----------------------------------------
+(setq default-buffer-file-coding-system 'utf-8-unix)
 (require 'init-evil)
 (require 'init-better-defaults)
 (require 'init-code)
