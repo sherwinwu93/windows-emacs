@@ -12,7 +12,8 @@
   (unless (eq system-type 'windows-nt)
     (set-selection-coding-system 'utf-8))
 ;; 初始化时打开
-;; (use-package spacemacs-theme)
+(use-package monokai-theme)
+;;(use-package spacemacs-theme)
 (require 'recentf)
 (require 'auto-save)
 ;; ----------------------------------------其他
@@ -47,7 +48,8 @@
 ;; 更改光标样式,全局而不是局部修改
 (setq-default cursor-type 'bar)
 ;; ----------主题
-(load-theme 'spacemacs-dark 1)
+;;(load-theme 'spacemacs-dark 1)
+(load-theme 'monokai 1)
 ;; ----------字体
 ;; 字体大小
 ;;(set-face-attribute 'default nil :height 110)
@@ -57,7 +59,7 @@
 
 ;; ----------------------------------------文件
 ;; 更改默认目录
-(setq default-directory "c:/Users/wusd/codes/")
+(setq default-directory "d:/git-code/")
 ;; 外界修改过文件,自动加载
 (global-auto-revert-mode 1)
 ;; 关闭生成init.el~文件
