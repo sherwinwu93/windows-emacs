@@ -7,10 +7,11 @@
     (normal-top-level-add-subdirs-to-load-path)))
 
 (add-subdirs-to-load-path "~/.emacs.d/lisp/")
-;; ----------------------------------------包管理.放最上面
+;; ----------------------------------------包管理和evil放最上面
 (require 'init-packages)
-;; ----------------------------------------
 (require 'init-evil)
+;; ----------------------------------------
+(require 'init-buffers-windows-frames)
 (require 'init-better-defaults)
 (require 'init-code)
 (require 'init-kbd-macros)
