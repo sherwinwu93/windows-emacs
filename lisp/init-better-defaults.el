@@ -59,7 +59,7 @@
 
 ;; ----------------------------------------文件
 ;; 更改默认目录
-(setq default-directory "d:/git-code/")
+(setq default-directory "/mnt/d/git-code/")
 ;; 外界修改过文件,自动加载
 (global-auto-revert-mode 1)
 ;; 关闭生成init.el~文件
