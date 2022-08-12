@@ -26,7 +26,7 @@
 ;; yes no -> y n
 (fset 'yes-or-no-p 'y-or-n-p)
 ;; ----------------------------------------改按键
-(global-set-key (kbd "<f1>") 'find-file)
+(global-set-key (kbd "<f1>") 'ivy-switch-buffer)
 ;; ----------------------------------------帮助
 
 
