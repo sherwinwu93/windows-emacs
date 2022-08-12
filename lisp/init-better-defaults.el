@@ -4,6 +4,7 @@
 (use-package smartparens)
 (use-package popwin)
 (use-package company)
+;; windows兼容
 (when (fboundp 'set-charset-priority)
     (set-charset-priority 'unicode))
   (prefer-coding-system 'utf-8)
@@ -11,6 +12,7 @@
   (setq system-time-locale "C")
   (unless (eq system-type 'windows-nt)
     (set-selection-coding-system 'utf-8))
+(setq default-buffer-file-coding-system 'utf-8-unix)
 ;; 初始化时打开
 (use-package monokai-theme)
 ;;(use-package spacemacs-theme)
@@ -26,7 +28,7 @@
 ;; yes no -> y n
 (fset 'yes-or-no-p 'y-or-n-p)
 ;; ----------------------------------------改按键
-(global-set-key (kbd "<f1>") 'ivy-switch-buffer)
+(global-set-key (kbd "<f1>") 'find-file)
 ;; ----------------------------------------帮助
 
 

@@ -17,9 +17,9 @@
   "fr" 'recentf-open-files
   "fs" 'save-buffer
   ;; bookmark
-  "bb" 'list-bookmarks
-  "bi" 'bookmark-set
-  "bs" 'bookmark-save
+  "bb" 'ivy-switch-buffer
+  "bl" 'list-buffers
+  "bk" 'kill-buffer
   ;; window
   ;; 需要设置window-numbering生效
   "o" 'other-window
