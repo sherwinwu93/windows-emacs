@@ -17,8 +17,7 @@
   "fr" 'recentf-open-files
   "fs" 'save-buffer
   ;; bookmark
-  "bb" 'ivy-switch-buffer
-  "bl" 'list-buffers
+  "bb" 'list-buffers
   "bk" 'kill-buffer
   ;; window
   ;; 需要设置window-numbering生效
@@ -81,7 +80,7 @@
              (neotree-mode . emacs)
              (w3m-mode . emacs)
              (gud-mode . emacs)
-             ;;(help-mode . emacs)
+             (help-mode . emacs)
              (eshell-mode . emacs)
              (shell-mode . emacs)
              (xref--xref-buffer-mode . emacs)
