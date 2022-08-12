@@ -17,8 +17,8 @@
   "fr" 'recentf-open-files
   "fs" 'save-buffer
   ;; bookmark
-  "bl" 'list-bookmarks
-  "ba" 'bookmark-set
+  "bb" 'list-bookmarks
+  "bi" 'bookmark-set
   "bs" 'bookmark-save
   ;; window
   ;; 需要设置window-numbering生效
