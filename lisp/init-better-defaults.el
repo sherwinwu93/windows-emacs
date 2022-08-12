@@ -74,7 +74,7 @@
 
 ;; --------------------文件编辑
 ;; 设置自动换行字数
-(setq-default fill-column 100)
+(setq-default fill-column 1024)
 ;; 临时标记模式
 (setq-default transient-mark-mode nil)
 ;; 选中时输入替换
