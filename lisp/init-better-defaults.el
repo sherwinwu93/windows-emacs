@@ -26,7 +26,7 @@
 ;; yes no -> y n
 (fset 'yes-or-no-p 'y-or-n-p)
 ;; ----------------------------------------改按键
-;;(global-set-key (kbd "<f1>") 'find-file)
+(global-set-key (kbd "<f1>") 'find-file)
 ;; ----------------------------------------帮助
 
 
@@ -44,7 +44,7 @@
 ;; 高亮当前行
 (global-hl-line-mode 1)
 ;;设置Emacs默认全屏
-(setq initial-frame-alist '((fullscreen . maximized)))
+;;(setq initial-frame-alist '((fullscreen . maximized)))
 ;; 更改光标样式,全局而不是局部修改
 (setq-default cursor-type 'bar)
 ;; ----------主题
