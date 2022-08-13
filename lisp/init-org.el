@@ -8,12 +8,12 @@
   )
 
 ;; ----------------------------------------org todo
-(setq org-todo-keywords
+(setq org-todo-keyords
       (quote ((sequence "TODO(t)" "STARTED(s)" "|" "DONE(d!/!)")
 	      (sequence "WAITING(w@/!)" "SOMEDAY(S)" "|" "CANCELLED(c@/!)" "MEETING(m)" "PHONE(p)"))))
 
 ;;fix doom modeline
-:custom-face
+;;custom-face
 (mode-line ((t (:height 0.9))))
 (mode-line-inactive ((t (:height 0.9))))
 
