@@ -4,7 +4,6 @@
     ("de" "denom" nil :count 13)
     ("lij" "lijie" nil :count 0)
     ("nu" "numer" nil :count 10)
-    ("tets" "test" nil :count 2)
     ("wusd" "wushengdong" nil :count 13)
    ))
 
