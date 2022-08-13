@@ -1,10 +1,3 @@
-(use-package monokai-theme)
-(use-package ivy
-  :ensure t
-  :diminish ivy-mode
-  :hook (after-init . ivy-mode))
-;;(use-package spacemacs-theme)
-
 ;; ----------------------------------------其他
 ;; 关闭按键提示功能
 (setq suggest-key-bindings nil)
@@ -22,14 +15,19 @@
 (menu-bar-mode 1)
 ;; 关闭文件滑动控件
 (scroll-bar-mode -1)
-;; ----------主题
-;;(load-theme 'spacemacs-dark 1)
+;; --------------------interactive
+(use-package ivy
+  :ensure t
+  :diminish ivy-mode
+  :hook (after-init . ivy-mode))
+(use-package swiper)
+(use-package counsel)
+
+;; ----------------------------------------主题
+(use-package monokai-theme)
 (load-theme 'monokai 1)
-;; ----------字体
-;; 字体大小
-;;(set-face-attribute 'default nil :height 105)
-;; 字体行间距
-(setq-default line-spacing 0.2)
+;;(use-package spacemacs-theme)
+;;(load-theme 'spacemacs-dark 1)
 
 
 (provide 'init-better-defaults)

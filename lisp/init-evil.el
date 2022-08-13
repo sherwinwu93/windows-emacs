@@ -42,12 +42,7 @@
              (messages-buffer-mode . normal)
              (js2-error-buffer-mode . emacs)))
   (evil-set-initial-state (car p) (cdr p)))
-;; 显示相对行号
-(global-display-line-numbers-mode)
 ;; }}
-;; bookmars
-(global-set-key (kbd "C-b") 'list-bookmarks)
-(global-set-key (kbd "C-i") 'bookmark-set)
 ;; evil leaderKey
 (evil-leader/set-key
   "i" 'string-insert-rectangle

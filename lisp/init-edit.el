@@ -1,16 +1,68 @@
 
-(use-package company)
-(use-package hungry-delete)
-(use-package swiper)
-(use-package counsel)
-(use-package smartparens)
-
 ;; ----------------------------------------Search and Replace
+;; --------------------Search
 ;; 设置查询不区分大小写: t不区分,nil区分
 (setq-default case-fold-search t)
 ;; 替换时不改变大小写情况
 (setq-default case-replace nil)
-;; --------------------代码缩进
+;; ----------------------------------------Edit
+;; 设置自动换行字数
+(setq-default fill-column 1024)
+;; 临时标记模式
+(setq-default transient-mark-mode nil)
+;;选中输入时,替换而不是增加
+(delete-selection-mode 1)
+;; 关闭缩进
+;; (electric-indent-mode -1)
+;; --------------------Font
+;; 字体大小
+;;(set-face-attribute 'default nil :height 105)
+;; 字体行间距
+(setq-default line-spacing 0.2)
+;; --------------------兼容windows编码
+(when (fboundp 'set-charset-priority)
+    (set-charset-priority 'unicode))
+  (prefer-coding-system 'utf-8)
+  (setq locale-coding-system 'utf-8)
+  (setq system-time-locale "C")
+  (unless (eq system-type 'windows-nt)
+    (set-selection-coding-system 'utf-8))
+(setq default-buffer-file-coding-system 'utf-8-unix)
+;; --------------------Display
+;; 光标
+(setq-default cursor-type 'bar)
+;; 高亮当前行
+(global-hl-line-mode 1)
+;; 显示相对行号
+(global-display-line-numbers-mode 1)
+(setq-default display-line-numbers-type 'relative)
+
+;; ----------------------------------------Code
+(use-package hungry-delete)
+;; --------------------Abbreviation
+(setq-default abbrev-mode t)
+(read-abbrev-file "~/.emacs.d/abbrev_defs")
+(define-key evil-normal-state-map (kbd "<SPC> aig") 'inverse-add-global-abbrev)
+(define-key evil-normal-state-map (kbd "<SPC> ail") 'inverse-add-mode-abbrev)
+(define-key evil-normal-state-map (kbd "<SPC> au") 'unexpand-abbrev)
+(define-key evil-normal-state-map (kbd "<SPC> ae") 'edit-abbrevs)
+(define-key evil-normal-state-map (kbd "<SPC> as") 'write-abbrev-file)
+;; --------------------Hippie补全
+(use-package company)
+;; 开启全局Company补全
+(global-company-mode 1)
+;; 'hippie-expand
+(setq hippie-expand-try-function-list '(try-expand-debbrev
+					try-expand-debbrev-all-buffers
+					try-expand-debbrev-from-kill
+					try-complete-file-name-partially
+					try-complete-file-name
+					try-expand-all-abbrevs
+					try-expand-list
+					try-expand-line
+					try-complete-lisp-symbol-partially
+					try-complete-lisp-symbol))
+;; --------------------Formatting
 (defun indent-buffer()
   (interactive)
   (indent-region (point-min) (point-max)))
@@ -26,53 +78,8 @@
 	(indent-buffer)
 	(message "Indent buffer.")))))
 (global-set-key (kbd "C-M-l") 'indent-region-or-buffer)
-;; ----------------------------------------code
-;; --------------------兼容windows编码
-(when (fboundp 'set-charset-priority)
-    (set-charset-priority 'unicode))
-  (prefer-coding-system 'utf-8)
-  (setq locale-coding-system 'utf-8)
-  (setq system-time-locale "C")
-  (unless (eq system-type 'windows-nt)
-    (set-selection-coding-system 'utf-8))
-(setq default-buffer-file-coding-system 'utf-8-unix)
-;; 光标
-(setq-default cursor-type 'bar)
-;; 高亮当前行
-(global-hl-line-mode 1)
-;; 设置自动换行字数
-(setq-default fill-column 1024)
-;; 临时标记模式
-(setq-default transient-mark-mode nil)
-;; 选中时输入替换
-(delete-selection-mode 1)
-;; 关闭缩进
-;; (electric-indent-mode -1)
-;; 开启全局Company补全
-(global-company-mode 1)
-;;选中输入时,替换而不是增加
-(delete-selection-mode 1)
-;; --------------------代码补全
-(setq-default abbrev-mode t)
-(read-abbrev-file "~/.emacs.d/abbrev_defs")
-(define-key evil-normal-state-map (kbd "<SPC> aig") 'inverse-add-global-abbrev)
-(define-key evil-normal-state-map (kbd "<SPC> ail") 'inverse-add-mode-abbrev)
-(define-key evil-normal-state-map (kbd "<SPC> au") 'unexpand-abbrev)
-(define-key evil-normal-state-map (kbd "<SPC> ae") 'edit-abbrevs)
-(define-key evil-normal-state-map (kbd "<SPC> as") 'write-abbrev-file)
-;; --------------------Hippie补全
-;; 'hippie-expand
-(setq hippie-expand-try-function-list '(try-expand-debbrev
-					try-expand-debbrev-all-buffers
-					try-expand-debbrev-from-kill
-					try-complete-file-name-partially
-					try-complete-file-name
-					try-expand-all-abbrevs
-					try-expand-list
-					try-expand-line
-					try-complete-lisp-symbol-partially
-					try-complete-lisp-symbol))
 ;; --------------------括号
+(use-package smartparens)
 ;; 括号模式
 (show-paren-mode 1)
 ;; 括号展示

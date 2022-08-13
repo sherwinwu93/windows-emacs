@@ -1,4 +1,4 @@
-;; ----------------------------------------配置插件源
+;; ----------------------------------------package-archives
 (require 'package)
 (package-initialize)
 (setq package-archives '(
@@ -7,6 +7,8 @@
                          ("melpa-stable" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")
                          ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
 			 ))
+;; ----------------------------------------use-package
+(require 'package)
 ;; 如果 use-package 没安装
 (unless (package-installed-p 'use-package)
   ;; 更新本地缓存
@@ -17,5 +19,9 @@
 (require 'use-package)
 ;; 让 use-package 永远按需安装软件包
 (setq use-package-always-ensure t)
+
+(defun package-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-packages.el"))
 
 (provide 'init-packages)
