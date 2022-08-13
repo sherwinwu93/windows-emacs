@@ -1,7 +1,7 @@
 
 ;; ----------------------------------------files
 (global-set-key (kbd "<f1>") 'find-file)
-(define-key evil-normal-state-map (kbd "<SPC> f") 'find-file)
+;; (define-key evil-normal-state-map (kbd "<SPC> f") 'find-file)
 ;; 更改默认目录
 (setq default-directory "/mnt/d/git-code/")
 ;; 自动同步硬盘文件
@@ -24,12 +24,11 @@
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-item 10)
-(define-key evil-normal-state-map (kbd "<SPC> r") 'recentf-open-files)
 (global-set-key (kbd "C-x C-r") 'recentf-open-files)
 ;; ----------------------------------------buffers
 
 (global-set-key (kbd "<f2>") 'ivy-switch-buffer)
-(define-key evil-normal-state-map (kbd "<SPC> b") 'ivy-switch-buffer)
+;; (define-key evil-normal-state-map (kbd "<SPC> b") 'ivy-switch-buffer)
 
 ;; ----------------------------------------windows
 ;; 绘制弹窗
