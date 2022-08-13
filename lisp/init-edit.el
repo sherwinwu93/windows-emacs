@@ -21,12 +21,12 @@
 (setq-default line-spacing 0.2)
 ;; --------------------兼容windows编码
 (when (fboundp 'set-charset-priority)
-    (set-charset-priority 'unicode))
-  (prefer-coding-system 'utf-8)
-  (setq locale-coding-system 'utf-8)
-  (setq system-time-locale "C")
-  (unless (eq system-type 'windows-nt)
-    (set-selection-coding-system 'utf-8))
+  (set-charset-priority 'unicode))
+(prefer-coding-system 'utf-8)
+(setq locale-coding-system 'utf-8)
+(setq system-time-locale "C")
+(unless (eq system-type 'windows-nt)
+  (set-selection-coding-system 'utf-8))
 (setq default-buffer-file-coding-system 'utf-8-unix)
 ;; --------------------Display
 ;; 光标
@@ -48,9 +48,11 @@
 (define-key evil-normal-state-map (kbd "<SPC> ae") 'edit-abbrevs)
 (define-key evil-normal-state-map (kbd "<SPC> as") 'write-abbrev-file)
 ;; --------------------Hippie补全
-(use-package company)
 ;; 开启全局Company补全
-(global-company-mode 1)
+(use-package company
+  :config
+  (global-company-mode 1)
+  )
 ;; 'hippie-expand
 (setq hippie-expand-try-function-list '(try-expand-debbrev
 					try-expand-debbrev-all-buffers
@@ -79,20 +81,22 @@
 	(message "Indent buffer.")))))
 (global-set-key (kbd "C-M-l") 'indent-region-or-buffer)
 ;; --------------------括号
-(use-package smartparens)
-;; 括号模式
-(show-paren-mode 1)
-;; 括号展示
-(define-advice show-paren-function (:around (fn) fix-show-paren-function)
-  "Highlight enclosing parens."
-  (cond ((looking-at-p "\\s(") (funcall fn))
-	(t (save-excursion
-	     (ignore-errors (backward-up-list))
-	     (funcall fn)))))
+(use-package smartparens
+  :config
+  ;; 括号展示
+  ;; 括号模式
+  (show-paren-mode 1)
+  (define-advice show-paren-function (:around (fn) fix-show-paren-function)
+    "Highlight enclosing parens."
+    (cond ((looking-at-p "\\s(") (funcall fn))
+	  (t (save-excursion
+	       (ignore-errors (backward-up-list))
+	       (funcall fn)))))
+  ;;设置hook,自动括号匹配
+  (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+  )
 ;; 选中区域S(增加括号
 (global-evil-surround-mode)
-;;设置hook,自动括号匹配
-(add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 ;; --------------------注释
 ;;快速注释
 (evilnc-default-hotkeys)
@@ -100,9 +104,9 @@
 (define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
 
 ;; --------------------bookmarks
-(define-key evil-visual-state-map (kbd "<SPC> mst") 'bookmark-set)
-(define-key evil-visual-state-map (kbd "<SPC> msv") 'bookmark-save)
-(define-key evil-visual-state-map (kbd "<SPC> me") 'edit-bookmark)
+(define-key evil-normal-state-map (kbd ",mi") 'bookmark-set)
+(define-key evil-normal-state-map (kbd ",ms") 'bookmark-save)
+(define-key evil-normal-state-map (kbd ",me") 'edit-bookmarks)
 
 
 (provide 'init-edit)

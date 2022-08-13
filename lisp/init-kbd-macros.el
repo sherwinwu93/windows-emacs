@@ -11,6 +11,7 @@
 (define-key evil-normal-state-map (kbd "<SPC> mi") 'insert-kbd-macro)
 (define-key evil-normal-state-map (kbd "<SPC> mo") 'open-kbd-macro-config)
 
+
 (defun open-kbd-macro-config()
   (interactive)
   (find-file "~/.emacs.d/lisp/init-kbd-macros.el"))

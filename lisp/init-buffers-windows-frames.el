@@ -1,5 +1,6 @@
 
 ;; ----------------------------------------files
+(global-set-key (kbd "<f1>") 'find-file)
 (define-key evil-normal-state-map (kbd "<SPC> f") 'find-file)
 ;; 更改默认目录
 (setq default-directory "/mnt/d/git-code/")
@@ -16,24 +17,26 @@
 (setq auto-save-silent t)   ; quietly save
 (setq auto-save-disable-predicates
       '((lambda ()
-      (string-suffix-p
-      "gpg"
-      (file-name-extension (buffer-name)) t))))
+	  (string-suffix-p
+	   "gpg"
+	   (file-name-extension (buffer-name)) t))))
 ;; --------------------最近打开
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-item 10)
 (define-key evil-normal-state-map (kbd "<SPC> r") 'recentf-open-files)
 (global-set-key (kbd "C-x C-r") 'recentf-open-files)
-
 ;; ----------------------------------------buffers
+
+(global-set-key (kbd "<f2>") 'ivy-switch-buffer)
 (define-key evil-normal-state-map (kbd "<SPC> b") 'ivy-switch-buffer)
-(define-key evil-normal-state-map (kbd "<SPC> s") 'save-buffer)
 
 ;; ----------------------------------------windows
 ;; 绘制弹窗
-(use-package popwin)
-(popwin-mode 1)
+(use-package popwin
+  :config
+  (popwin-mode 1)
+  )
 (window-numbering-mode 1)
 (define-key evil-normal-state-map (kbd "<SPC> o") 'other-window)
 (define-key evil-normal-state-map (kbd "<SPC> 0") 'select-window-0)
@@ -64,15 +67,15 @@
   (projectile-mode 1)
   ;; 定义和它有关的功能的 leader key
   (define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map))
-(use-package neotree)
-(add-hook 'neotree-mode-hook
-          (lambda ()
-            (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
-            (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
-            (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
-            (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
-(define-key evil-normal-state-map (kbd "<SPC> pt") 'neotree-toggle)
-(define-key evil-normal-state-map (kbd "<SPC> pr") 'neotree-refresh)
+(use-package neotree
+  :config
+  (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+  (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+  (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+  (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
+  (define-key evil-normal-state-map (kbd "<SPC> pt") 'neotree-toggle)
+  (define-key evil-normal-state-map (kbd "<SPC> pr") 'neotree-refresh)
+  )
 
 ;; ----------------------------------------frames
 (define-key evil-normal-state-map (kbd "<SPC> 50") 'delete-frame)
