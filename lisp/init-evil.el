@@ -52,30 +52,6 @@
 (evil-leader/set-key
   "i" 'string-insert-rectangle
   ":" 'counset-M-x
-  ;; file
-  ;; "d" 'dired
-  ;; "ff" 'find-file
-  ;; "fr" 'recentf-open-files
-  ;; "fs" 'save-buffer
-  ;; bookmark
-  ;; "bb" 'list-buffers
-  ;; "bk" 'kill-buffer
-  ;; window
-  ;; 需要设置window-numbering生效
-  ;; "o" 'other-window
-  ;; "0" 'select-window-0
-  ;; "1" 'select-window-1
-  ;; "2" 'select-window-2
-  ;; "3" 'select-window-3
-  ;; "4" 'select-window-4
-  ;; "=" 'enlarge-window
-  ;; "-" 'shrink-window
-  ;; "]" 'enlarge-window-horizontally
-  ;; "[" 'shrink-window-horizontally
-  ;; "w0" 'delete-window
-  ;; "w1" 'delete-other-windows
-  ;; "w2" 'split-window-below
-  ;; "w3" 'split-window-right
   ;; frame
   "50" 'delete-frame
   "5o" 'other-frame

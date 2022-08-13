@@ -7,6 +7,9 @@
     (normal-top-level-add-subdirs-to-load-path)))
 
 (add-subdirs-to-load-path "~/.emacs.d/lisp/")
+(defun load-init-file()
+  (interactive)
+  (load-file "~/.emacs.d/init.el"))
 ;; ----------------------------------------包管理和evil放最上面
 (require 'init-packages)
 (require 'init-evil)
