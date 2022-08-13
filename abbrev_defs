@@ -4,7 +4,8 @@
     ("de" "denom" nil :count 13)
     ("lij" "lijie" nil :count 0)
     ("nu" "numer" nil :count 10)
-    ("wusd" "wushengdong" nil :count 12)
+    ("tets" "test" nil :count 2)
+    ("wusd" "wushengdong" nil :count 13)
    ))
 
 (define-abbrev-table 'jdee-mode-abbrev-table
@@ -12,8 +13,8 @@
     ("catch" "catch" c-electric-continued-statement :count 0)
     ("else" "else" c-electric-continued-statement :count 0)
     ("finally" "finally" c-electric-continued-statement :count 0)
-    ("while" "while" c-electric-continued-statement :count 0)
     ("lij" "lijie" nil :count 0)
+    ("while" "while" c-electric-continued-statement :count 0)
     ("wusd" "wushengdong" nil :count 11)
    ))
 
@@ -21,3 +22,4 @@
   '(
     ("ail" "add-inverse-local" nil :count 1)
    ))
+
