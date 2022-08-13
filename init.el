@@ -14,22 +14,19 @@
 (require 'init-packages)
 (require 'init-evil)
 ;; ----------------------------------------
-(require 'init-buffers-windows-frames)
 (require 'init-better-defaults)
-(require 'init-code)
+(require 'init-buffers-windows-frames)
+(require 'init-edit)
 (require 'init-kbd-macros)
-(require 'init-helm)
 ;; ----------------------------------------
 (require 'init-vc)
 (require 'init-org)
-(require 'init-dired)
 (require 'init-shell)
 (require 'init-input)
 ;; ----------------------------------------语言
 ;; (require 'init-translate)
 (require 'init-scheme)
 (require 'init-js)
-(require 'init-project)
 (require 'init-markdown)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

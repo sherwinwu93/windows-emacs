@@ -52,43 +52,12 @@
 (evil-leader/set-key
   "i" 'string-insert-rectangle
   ":" 'counset-M-x
-  ;; frame
-  "50" 'delete-frame
-  "5o" 'other-frame
-  "52" 'make-frame
-  "wff" 'find-file-other-frame
-  ;; bookmarks
-  "mst" 'bookmark-set
-  "msv" 'bookmark-save
-  "me" 'edit-bookmarks
-  ;; git
-  "g" 'magit-status
-  ;; macro
-  "mn" 'name-last-kbd-macro
-  "mi" 'insert-kbd-macro
-  "mo" 'open-kbd-macro-config
-  ;; abbrev
-  "aig" 'inverse-add-global-abbrev
-  "ail" 'inverse-add-mode-abbrev
-  "au" 'unexpand-abbrev
-  "ae" 'edit-abbrevs
-  "as" 'write-abbrev-file
-  ;; project
-  "pt" 'neotree-toggle
-  "pr" 'neotree-refresh
-  ;; shell
-  "'" 'shell
   )
-
-
-(setq-default display-line-numbers-type 'relative)
 
 ;; 激活evil的leaderKey
 (global-evil-leader-mode)
 ;; 开启evil模式
 (evil-mode 1)
-;; window-numbering
-(window-numbering-mode 1)
 
 (evil-leader/set-leader "<SPC>")
 
@@ -96,13 +65,6 @@
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 
-;; 选中区域S(增加括号
-(global-evil-surround-mode)
-
-;;快速注释
-(evilnc-default-hotkeys)
-(define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
-(define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
 
 ;; which-key
 (which-key-mode 1)

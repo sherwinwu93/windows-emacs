@@ -3,7 +3,7 @@
 (setq org-src-fontify-natively t)
 ;;Agenda的使用
 ;;设置默认Org Agenda文件目录
-(setq org-agenda-files '("~/codes/notes/todos"))
+(setq org-agenda-files '("~/.emacs.d/todos"))
 ;;设置org-agenda打开快捷键
 (global-set-key (kbd "C-c a") 'org-agenda)
 
