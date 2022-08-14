@@ -1,11 +1,12 @@
 
 ;; ----------------------------------------agenda
 (require 'org)
+;; 快速查询等等
 (define-key global-map (kbd "C-c a") 'org-agenda)
 ;; 设置agenda路径
 (setq org-agenda-files '("~/notes/todos/"))
 ;; ----------------------------------------priority & tags & state
-;; 定义任务优先级,及标签分类
+;; 优先级
 (setq org-agenda-custom-commands
       '(
         ("w" . "任务安排")
@@ -16,15 +17,18 @@
 	 ;; 尚未进行管理的任务
          ((stuck "") ;; review stuck projects as designated by org-stuck-projects
 	  ;; 标签
-          (tags-todo "project")
           (tags-todo "daily")
           (tags-todo "weekly")
+          (tags-todo "monthly")
           (tags-todo "school")
           (tags-todo "code")
-          (tags-todo "theory")
+          (tags-todo "family")
           ))
         ))
-;; 任务生命周期
+;; C-c C-t 打开state
+;; !:增加时间戳
+;; @:会空出一行
+;; @/!: 同时使用
 (setq org-todo-keywords
       '(
 	(sequence "TODO(t!)" "STARTED(s)" "|" "DONE(d!)" "CANCELED(c @/!)")
@@ -46,13 +50,13 @@
 ;; --------------------templates
 (setq org-capture-templates
       '(
-        ("t" "Todo" entry (file+headline org-agenda-file-task "Work")
+        ("t" "Todo_work" entry (file+headline org-agenda-file-task "Work")
          "* TODO [#B] %?\n  %i\n"
          :empty-lines 1)
-        ("l" "Tolearn" entry (file+headline org-agenda-file-task "Learning")
+        ("l" "Todo_learning" entry (file+headline org-agenda-file-task "Learning")
          "* TODO [#B] %?\n  %i\n"
          :empty-lines 1)
-        ("h" "Toplay" entry (file+headline org-agenda-file-task "Hobbies")
+        ("h" "Todo_hobbies" entry (file+headline org-agenda-file-task "Hobbies")
          "* TODO [#C] %?\n  %i\n"
          :empty-lines 1)
         ("o" "Todo_others" entry (file+headline org-agenda-file-task "Others")
