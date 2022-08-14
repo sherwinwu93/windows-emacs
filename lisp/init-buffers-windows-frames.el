@@ -6,6 +6,9 @@
 (setq default-directory "~/.emacs.d/")
 ;; 自动同步硬盘文件
 (global-auto-revert-mode 1)
+;; --------------------dired
+(define-key evil-normal-state-map (kbd "<SPC> d") 'dired)
+(global-set-key (kbd "<f2>") 'dired)
 ;; --------------------auto save
 ;; 自动保存
 (require 'auto-save)
@@ -27,7 +30,6 @@
 (global-set-key (kbd "C-x C-r") 'recentf-open-files)
 ;; ----------------------------------------buffers
 
-(global-set-key (kbd "<f2>") 'ivy-switch-buffer)
 (define-key evil-normal-state-map (kbd "<SPC> b") 'ivy-switch-buffer)
 
 ;; ----------------------------------------windows
@@ -54,8 +56,6 @@
 (define-key evil-normal-state-map (kbd "<SPC> w1") 'delete-other-windows)
 (define-key evil-normal-state-map (kbd "<SPC> w2") 'split-window-below)
 (define-key evil-normal-state-map (kbd "<SPC> w3") 'split-window-right)
-;; --------------------dired
-(define-key evil-normal-state-map (kbd "<SPC> d") 'dired)
 ;; 设置dired-mode只有一个buffer
 (put 'dired-find-alternate-file 'disabled nil)
 (with-eval-after-load 'dired
