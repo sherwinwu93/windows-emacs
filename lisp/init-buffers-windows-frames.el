@@ -31,6 +31,9 @@
 (define-key evil-normal-state-map (kbd "<SPC> b") 'ivy-switch-buffer)
 
 ;; ----------------------------------------windows
+;; 移动其它窗口
+(define-key evil-normal-state-map (kbd "<SPC> j") 'scroll-other-window)
+(define-key evil-normal-state-map (kbd "<SPC> k") 'scroll-other-window-down)
 ;; 绘制弹窗
 (use-package popwin
   :config
