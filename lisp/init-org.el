@@ -4,7 +4,8 @@
 (define-key global-map (kbd "C-c a") 'org-agenda)
 ;; 设置agenda路径
 (setq org-agenda-files '("~/notes/todos/"))
-;; 自定义agenda命令
+;; ----------------------------------------priority & tags & state
+;; 定义任务优先级,及标签分类
 (setq org-agenda-custom-commands
       '(
         ("w" . "任务安排")
@@ -23,6 +24,7 @@
           (tags-todo "theory")
           ))
         ))
+;; 任务生命周期
 (setq org-todo-keywords
       '(
 	(sequence "TODO(t!)" "STARTED(s)" "|" "DONE(d!)" "CANCELED(c @/!)")
@@ -34,13 +36,14 @@
 ;; 这边就是为路径赋值
 (defvar org-agenda-dir "" "gtd org files location")
 (setq-default org-agenda-dir "~/notes/todos/")
+
 (setq org-agenda-file-note (expand-file-name "notes.org" org-agenda-dir))
 (setq org-agenda-file-task (expand-file-name "task.org" org-agenda-dir))
 (setq org-agenda-file-calendar (expand-file-name "calendar.org" org-agenda-dir))
 (setq org-agenda-file-finished (expand-file-name "finished.org" org-agenda-dir))
 (setq org-agenda-file-canceled (expand-file-name "canceled.org" org-agenda-dir))
 
-;; 添加每次打开时可添加的任务类型
+;; --------------------templates
 (setq org-capture-templates
       '(
         ("t" "Todo" entry (file+headline org-agenda-file-task "Work")
@@ -63,21 +66,20 @@
          :empty-lines 1)
         )
       )
-;; --------------------转移任务到另一个文件
+;; --------------------refile
 (define-key global-map (kbd "C-c r") 'org-refile)
 (setq org-refile-targets '(
-			   ;; (nil :maxlevel . 1)
 			   (org-agenda-file-note :maxlevel . 1)
 			   (org-agenda-file-task :maxlevel . 1)
 			   (org-agenda-file-calendar :maxlevel . 1)
 			   (org-agenda-file-finished :maxlevel . 1)
 			   (org-agenda-file-canceled :maxlevel . 1)
 			   ))
+;; ----------------------------------------番茄闹钟
 (use-package org-pomodoro)
-(define-key evil-normal-state-map (kbd "<SPC> a q") 'org-set-tags-command)
-(define-key evil-normal-state-map (kbd "<SPC> a t") 'org-todo)
+
+
 (defun org-file()
   (interactive)
   (find-file "~/.emacs.d/lisp/init-org.el"))
-
 (provide 'init-org)
