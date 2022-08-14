@@ -1,12 +1,3 @@
-
-(use-package org
-  :pin mepla
-  :ensure t
-  )
-(use-package org-contrib
-  :pin nongnu
-  )
-
 ;; ----------------------------------------org todo
 ;; (setq org-todo-keyords
 ;;       (quote ((sequence "TODO(t)" "STARTED(s)" "|" "DONE(d!/!)")
@@ -44,6 +35,7 @@
 ;; 	;; ...other commands here
 ;; 	))
 
+(require 'org)
 (setq org-agenda-files '("~/notes/todos/"))
 (setq org-agenda-custom-commands
         '(

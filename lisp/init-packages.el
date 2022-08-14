@@ -3,15 +3,11 @@
 (package-initialize)
 (setq package-archives '(
 			 ("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-                         ("melpa-stable" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")
-                         ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-			 ("nongnu" . "http://mirrors.tuna.tsinghua.edu.cn/nongnu/")
+			 ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+			 ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+			 ("nongnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
 			 ))
 
-;;; 这个配置一定要配置在 use-package 的初始化之前，否则无法正常安装
-(assq-delete-all 'org package--builtins)
-(assq-delete-all 'org package--builtin-versions)
 ;; ----------------------------------------use-package
 (require 'package)
 ;; 如果 use-package 没安装

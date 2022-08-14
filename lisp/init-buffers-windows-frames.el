@@ -3,17 +3,17 @@
 (global-set-key (kbd "<f1>") 'find-file)
 (define-key evil-normal-state-map (kbd "<SPC> f") 'find-file)
 ;; 更改默认目录
-(setq default-directory "/mnt/d/git-code/")
+(setq default-directory "~/.emacs.d/")
 ;; 自动同步硬盘文件
 (global-auto-revert-mode 1)
 ;; --------------------auto save
+;; 自动保存
+(require 'auto-save)
+(auto-save-enable)
 ;; 关闭生成init.el~文件
 (setq make-backup-files nil)
 ;; 关闭auto-save目录的文件
 (setq auto-save-default nil)
-;; 自动保存
-(require 'auto-save)
-(auto-save-enable)
 (setq auto-save-silent t)   ; quietly save
 (setq auto-save-disable-predicates
       '((lambda ()
@@ -54,7 +54,7 @@
 ;; --------------------dired
 (define-key evil-normal-state-map (kbd "<SPC> d") 'dired)
 ;; 设置dired-mode只有一个buffer
-;; (put 'dired-find-alternate-file 'disabled nil)
+(put 'dired-find-alternate-file 'disabled nil)
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 ;; --------------------project
