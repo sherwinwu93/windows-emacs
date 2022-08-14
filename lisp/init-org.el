@@ -7,6 +7,7 @@
 ;; 设置agenda路径
 (setq org-agenda-files '("~/notes/todos/"))
 ;; ----------------------------------------priority & tags & state
+(define-key evil-normal-state-map (kbd "<SPC> tt") 'org-set-tags-command)
 ;; 优先级
 (setq org-agenda-custom-commands
       '(
@@ -30,7 +31,6 @@
 ;; !:增加时间戳
 ;; @:会空出一行
 ;; @/!: 同时使用
-(define-key evil-normal-state-map (kbd "<SPC> tt") 'org-todo)
 (setq org-todo-keywords
       '(
 	(sequence "TODO(t!)" "STARTED(s)" "|" "DONE(d!)" "CANCELED(c @/!)")
