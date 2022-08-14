@@ -29,5 +29,8 @@
 ;;(use-package spacemacs-theme)
 ;;(load-theme 'spacemacs-dark 1)
 
+(defun better-defaults-file()
+  (find-file "~/.emacs.d/lisp/init-better-defaults.el"))
+
 
 (provide 'init-better-defaults)

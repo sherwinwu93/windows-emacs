@@ -58,5 +58,8 @@
       '((sequence "BUG(b!)" "|" "FIXED(f!)")
       (sequence "TODO(t!)" "SOMEDAY(s)" "|" "DONE(d!)" "CANCELED(c @/!)")
      ))
+(defun org-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-org.el"))
 
 (provide 'init-org)

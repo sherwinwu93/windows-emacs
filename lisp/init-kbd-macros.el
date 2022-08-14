@@ -12,8 +12,8 @@
 (define-key evil-normal-state-map (kbd "<SPC> mo") 'open-kbd-macro-config)
 
 
-(defun open-kbd-macro-config()
+(defun kbd-macros-file()
   (interactive)
-  (find-file "~/.emacs.d/lisp/init-kbd-macros.el"))
+  (find-file "~/.emacs.d/lisp/init-kbd-macros.el.el"))
 
 (provide 'init-kbd-macros)

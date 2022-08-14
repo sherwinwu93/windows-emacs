@@ -65,6 +65,8 @@
 (which-key-mode 1)
 
 
-
+(defun evil-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-evil.el"))
 
 (provide 'init-evil)

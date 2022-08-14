@@ -5,4 +5,8 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 
+(defun markdown-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-markdown.el"))
+
 (provide 'init-markdown)

@@ -108,5 +108,7 @@
 (define-key evil-normal-state-map (kbd ",ms") 'bookmark-save)
 (define-key evil-normal-state-map (kbd ",me") 'edit-bookmarks)
 
-
+(defun edit-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-edit.el"))
 (provide 'init-edit)

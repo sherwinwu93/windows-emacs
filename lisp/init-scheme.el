@@ -19,6 +19,8 @@
 
 
 
-
+(defun scheme-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-scheme.el"))
 
 (provide 'init-scheme)

@@ -14,4 +14,8 @@
 )
 (setq rime-show-candidate 'posframe)
 
+(defun input-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-input.el"))
+
 (provide 'init-input)

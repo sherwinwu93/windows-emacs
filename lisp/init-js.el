@@ -32,5 +32,8 @@
 
 (global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
 
+(defun js-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-js.el"))
 
 (provide 'init-js)
