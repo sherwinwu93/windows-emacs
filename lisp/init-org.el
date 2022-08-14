@@ -36,6 +36,7 @@
 ;; 	))
 
 (require 'org)
+(define-key global-map (kbd "C-c a") 'org-agenda)
 (setq org-agenda-files '("~/notes/todos/"))
 (setq org-agenda-custom-commands
         '(
