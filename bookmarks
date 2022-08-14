@@ -8,15 +8,15 @@
  (rear-context-string . "41 8月  13 00:26 ")
  (position . 164))
 ("org-refile-last-stored"
- (filename . "~/notes/todos/finished.org")
- (front-context-string)
- (rear-context-string . "\n** wushengdong\n")
- (position . 533))
+ (filename . "~/notes/todos/task.org")
+ (front-context-string . "** TODO [#B] NCE")
+ (rear-context-string . "f) }\n* Learning\n")
+ (position . 321))
 ("org-capture-last-stored"
  (filename . "~/notes/todos/task.org")
- (front-context-string . "** TODO [#B] 给谬谬")
- (rear-context-string . " [#C] \n\n* Work\n\n")
- (position . 341))
+ (front-context-string . "** TODO [#B] hah")
+ (rear-context-string . "st\n\n* Learning\n\n")
+ (position . 383))
 (".emacs.d"
  (filename . "~/.emacs.d/")
  (front-context-string . "abbrev_defs\n  dr")

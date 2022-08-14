@@ -3,6 +3,7 @@
 (require 'org)
 ;; 快速查询等等
 (define-key global-map (kbd "C-c a") 'org-agenda)
+(define-key evil-normal-state-map (kbd "<SPC> aa") 'org-agenda)
 ;; 设置agenda路径
 (setq org-agenda-files '("~/notes/todos/"))
 ;; ----------------------------------------priority & tags & state
@@ -29,6 +30,7 @@
 ;; !:增加时间戳
 ;; @:会空出一行
 ;; @/!: 同时使用
+(define-key evil-normal-state-map (kbd "<SPC> tt") 'org-todo)
 (setq org-todo-keywords
       '(
 	(sequence "TODO(t!)" "STARTED(s)" "|" "DONE(d!)" "CANCELED(c @/!)")
@@ -36,6 +38,7 @@
 ;; ----------------------------------------capture
 ;; 绑定键位
 (define-key global-map (kbd "C-c c") 'org-capture)
+(define-key evil-normal-state-map (kbd "<SPC> c") 'org-capture)
 
 ;; 这边就是为路径赋值
 (defvar org-agenda-dir "" "gtd org files location")
@@ -72,7 +75,10 @@
       )
 ;; --------------------refile
 (define-key global-map (kbd "C-c r") 'org-refile)
+(define-key evil-normal-state-map (kbd "<SPC> r") 'org-refile)
 (setq org-refile-targets '(
+			   ;;修复bug,不可删除
+			   (nil :maxlevel . 1)
 			   (org-agenda-file-note :maxlevel . 1)
 			   (org-agenda-file-task :maxlevel . 1)
 			   (org-agenda-file-calendar :maxlevel . 1)
@@ -81,6 +87,9 @@
 			   ))
 ;; ----------------------------------------番茄闹钟
 (use-package org-pomodoro)
+(define-key evil-normal-state-map (kbd "<SPC> ts") 'org-clock-in)
+(define-key evil-normal-state-map (kbd "<SPC> te") 'org-clock-out)
+(define-key evil-normal-state-map (kbd "<SPC> tc") 'org-clock-cancel)
 
 
 (defun org-file()
