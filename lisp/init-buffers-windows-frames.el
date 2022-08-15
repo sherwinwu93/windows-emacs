@@ -85,5 +85,8 @@
 (define-key evil-normal-state-map (kbd "<SPC> 52") 'make-frame)
 (define-key evil-normal-state-map (kbd "<SPC> 55") 'find-file-other-frame)
 
+(defun buffers-windows-frames()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-buffers-windows-frames.el"))
 
 (provide 'init-buffers-windows-frames)

@@ -21,7 +21,7 @@
              (neotree-mode . emacs)
              (w3m-mode . emacs)
              (gud-mode . emacs)
-             (help-mode . normal)
+             (help-mode . emacs)
              (eshell-mode . emacs)
              (shell-mode . emacs)
              (xref--xref-buffer-mode . emacs)
