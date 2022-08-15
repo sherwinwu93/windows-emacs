@@ -1,7 +1,6 @@
 
 ;; ----------------------------------------agenda
 (require 'org)
-(define-key org-mode-map (kbd "M-<return>") 'newline-and-indent)
 ;; 快速查询等等
 (define-key global-map (kbd "C-c a") 'org-agenda)
 (define-key evil-normal-state-map (kbd "<SPC> aa") 'org-agenda)
