@@ -1,8 +1,7 @@
 
-
-(define-key global-map (kbd "M-<return>") 'org-return-indent)
 ;; ----------------------------------------agenda
 (require 'org)
+(define-key org-mode-map (kbd "M-<return>") 'newline-and-indent)
 ;; 快速查询等等
 (define-key global-map (kbd "C-c a") 'org-agenda)
 (define-key evil-normal-state-map (kbd "<SPC> aa") 'org-agenda)
@@ -36,7 +35,8 @@
 (define-key evil-normal-state-map (kbd "<SPC> t") 'org-todo)
 (setq org-todo-keywords
       '(
-	(sequence "WAITING(w)"  "TODO(t!)" "STARTED(s)" "|" "DONE(d!)" "CANCELED(c @/!)")
+	(sequence "TODO(t!)" "STARTED(s)" "|" "DONE(d!)" "CANCELED(c @/!)")
+	(sequence "OUT(o!)"  "IN(i @/!)")
 	))
 ;; ----------------------------------------capture
 ;; 绑定键位
@@ -52,6 +52,7 @@
 (setq org-agenda-file-calendar (expand-file-name "calendar.org" org-agenda-dir))
 (setq org-agenda-file-finished (expand-file-name "finished.org" org-agenda-dir))
 (setq org-agenda-file-canceled (expand-file-name "canceled.org" org-agenda-dir))
+(setq org-agenda-file-finance (expand-file-name "finance.org" org-agenda-dir))
 
 ;; --------------------templates
 (setq org-capture-templates
@@ -73,6 +74,9 @@
          :empty-lines 1)
         ("i" "ideas" entry (file+headline org-agenda-file-note "Quick ideas")
          "* %?\n  %i\n %U"
+         :empty-lines 1)
+        ("f" "finance" entry (file+headline org-agenda-file-finance "Quick finance")
+         "* | | |%i|"
          :empty-lines 1)
         )
       )

@@ -6,6 +6,7 @@
 ;; 替换时不改变大小写情况
 (setq-default case-replace nil)
 ;; ----------------------------------------Edit
+(define-key global-map (kbd "M-<return>") 'newline-and-indent)
 ;; 设置自动换行字数
 (setq-default fill-column 1024)
 ;; 临时标记模式

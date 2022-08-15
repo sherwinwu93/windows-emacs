@@ -6,6 +6,10 @@
 (setq default-directory "~/.emacs.d/")
 ;; 自动同步硬盘文件
 (global-auto-revert-mode 1)
+;; --------------------neotree
+(defun neotree-doc()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/neotree.org"))
 ;; --------------------dired
 (define-key evil-normal-state-map (kbd "<SPC> d") 'dired)
 (global-set-key (kbd "<f2>") 'dired)
@@ -85,7 +89,7 @@
 (define-key evil-normal-state-map (kbd "<SPC> 52") 'make-frame)
 (define-key evil-normal-state-map (kbd "<SPC> 55") 'find-file-other-frame)
 
-(defun buffers-windows-frames()
+(defun buffers-windows-frames-file()
   (interactive)
   (find-file "~/.emacs.d/lisp/init-buffers-windows-frames.el"))
 

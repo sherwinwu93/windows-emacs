@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("todos"
+(("finance.org"
+ (filename . "~/notes/todos/finance.org")
+ (front-context-string . "* Quick finance\n")
+ (rear-context-string)
+ (position . 1))
+("todos"
  (filename . "~/notes/todos/")
  (front-context-string . "0106.md\n  drwxrw")
  (rear-context-string . "41 8月  13 00:26 ")
@@ -13,10 +18,10 @@
  (rear-context-string . "f) }\n* Learning\n")
  (position . 321))
 ("org-capture-last-stored"
- (filename . "~/notes/todos/task.org")
- (front-context-string . "** TODO [#B] hah")
- (rear-context-string . "st\n\n* Learning\n\n")
- (position . 383))
+ (filename . "~/notes/todos/finance.org")
+ (front-context-string . "** IN 那云\n  \n  [2")
+ (rear-context-string . "-15 Mon 17:09]\n\n")
+ (position . 173))
 (".emacs.d"
  (filename . "~/.emacs.d/")
  (front-context-string)

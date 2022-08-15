@@ -14,6 +14,6 @@
 
 (defun kbd-macros-file()
   (interactive)
-  (find-file "~/.emacs.d/lisp/init-kbd-macros.el.el"))
+  (find-file "~/.emacs.d/lisp/init-kbd-macros.el"))
 
 (provide 'init-kbd-macros)
