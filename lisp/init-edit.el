@@ -105,6 +105,11 @@
 (define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
 
 ;; --------------------bookmarks
+(defun bookmark-set$save()
+  (interactive)
+  (bookmark-set)
+  (bookmark-save))
+(define-key global-map (kbd "C-x rs") 'bookmark-set$save)
 (define-key evil-normal-state-map (kbd ",mi") 'bookmark-set)
 (define-key evil-normal-state-map (kbd ",ms") 'bookmark-save)
 (define-key evil-normal-state-map (kbd ",me") 'edit-bookmarks)
