@@ -13,6 +13,7 @@
              (Info-mode . emacs)
              (term-mode . emacs)
              (sdcv-mode . emacs)
+             (org-mode . normal)
              (anaconda-nav-mode . emacs)
              (log-edit-mode . emacs)
              (vc-log-edit-mode . emacs)

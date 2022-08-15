@@ -19,9 +19,9 @@
  (position . 383))
 (".emacs.d"
  (filename . "~/.emacs.d/")
- (front-context-string . "abbrev_defs\n  dr")
- (rear-context-string . "99 8月  14 13:26 ")
- (position . 162))
+ (front-context-string)
+ (rear-context-string . "e-bookmarks.eld\n")
+ (position . 645))
 ("notes"
  (filename . "~/notes/")
  (front-context-string . "  /root/notes:\n ")

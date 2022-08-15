@@ -34,7 +34,7 @@
 (define-key evil-normal-state-map (kbd "<SPC> t") 'org-todo)
 (setq org-todo-keywords
       '(
-	(sequence "TODO(t!)" "STARTED(s)" "|" "DONE(d!)" "CANCELED(c @/!)")
+	(sequence "WAITING(w)"  "TODO(t!)" "STARTED(s)" "|" "DONE(d!)" "CANCELED(c @/!)")
 	))
 ;; ----------------------------------------capture
 ;; 绑定键位
