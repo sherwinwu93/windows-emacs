@@ -1,6 +1,6 @@
 
 
-(define-key org-mode-map (kbd "M-<return>") 'org-return-indent)
+(define-key global-map (kbd "M-<return>") 'org-return-indent)
 ;; ----------------------------------------agenda
 (require 'org)
 ;; 快速查询等等
