@@ -30,10 +30,10 @@
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-item 10)
-(global-set-key (kbd "<menu> r") 'recentf-open-files)
+(global-set-key (kbd "<menu> n") 'recentf-open-files)
 ;; ----------------------------------------buffers
 
-(define-key global-map (kbd "<menu> b") 'ivy-switch-buffer)
+(define-key global-map (kbd "<menu> <menu>") 'ivy-switch-buffer)
 (define-key global-map (kbd "<menu> <left>") 'previous-buffer)
 (define-key global-map (kbd "<menu> <right>") 'next-buffer)
 

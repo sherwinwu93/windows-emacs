@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("task.org"
+(("org-refile-last-stored"
+ (filename . "~/notes/todos/finished.org")
+ (front-context-string . "** BUG<2022-08-1")
+ (rear-context-string . "8-16 Tue 14:28]\n")
+ (position . 841))
+("task.org"
  (filename . "~/notes/todos/task.org")
  (front-context-string . "#+LATEX_HEADER: ")
  (rear-context-string)

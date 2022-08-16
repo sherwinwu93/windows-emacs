@@ -15,6 +15,8 @@
 (setq-default case-fold-search t)
 ;; 替换时不改变大小写情况
 (setq-default case-replace nil)
+;; --------------------Replace
+(define-key global-map (kbd "<menu> s") 'query-replace)
 ;; ----------------------------------------Edit
 ;; (define-key global-map (kbd "M-<return>") 'newline-and-indent)
 ;; 设置自动换行字数
@@ -120,7 +122,7 @@
   (interactive)
   (bookmark-set)
   (bookmark-save))
-(define-key global-map (kbd "<menu> s") 'bookmark-set$save)
+(define-key global-map (kbd "<menu> b") 'bookmark-set$save)
 (define-key global-map (kbd "<menu> l") 'list-bookmarks)
 (defun bookmarks-file()
   (interactive)

@@ -1,6 +1,6 @@
 (use-package magit
   :config
-  (define-key evil-normal-state-map (kbd "<SPC> g") 'magit)
+  (define-key global-map (kbd "<menu> g") 'magit)
   :bind (("C-x g" . magit)))
 
 (defun vc-file()
