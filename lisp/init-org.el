@@ -34,7 +34,7 @@
 (define-key evil-normal-state-map (kbd "<SPC> t") 'org-todo)
 (setq org-todo-keywords
       '(
-	(sequence "TODO(t!)" "|" "DONE(d!)" "CANCELED(c @/!)")
+	(sequence "TODO(t!)" "DOING(g!)" "|" "DONE(d!)" "CANCELED(c @/!)")
 	(sequence "OUT(o!)"  "IN(i @/!)")
 	))
 ;; ----------------------------------------capture
