@@ -7,9 +7,9 @@
    (kmacro-lambda-form [?\( ?l ?o ?a ?d ?  ?\" ?~ ?/ ?l ?o ?c ?a ?l ?c ?o ?d ?e ?s ?/ ?s ?i ?c ?p ?/ ?i ?n ?i ?t ?. ?s ?c ?m ?\" ?\) ?x backspace ?\C-x ?\C-e] 0 "%d"))
 
 ;; macro
-(define-key evil-normal-state-map (kbd "<SPC> mn") 'name-last-kbd-macro)
-(define-key evil-normal-state-map (kbd "<SPC> mi") 'insert-kbd-macro)
-(define-key evil-normal-state-map (kbd "<SPC> mo") 'open-kbd-macro-config)
+(define-key global-map (kbd "<menu> mn") 'name-last-kbd-macro)
+(define-key global-map (kbd "<menu> mi") 'insert-kbd-macro)
+(define-key global-map (kbd "<menu> mo") 'open-kbd-macro-config)
 
 
 (defun kbd-macros-file()

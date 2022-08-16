@@ -37,8 +37,8 @@
 
 ;; ----------------------------------------windows
 ;; 移动其它窗口
-(define-key evil-normal-state-map (kbd "<SPC> j") 'scroll-other-window)
-(define-key evil-normal-state-map (kbd "<SPC> k") 'scroll-other-window-down)
+(define-key global-map (kbd "<menu> j") 'scroll-other-window)
+(define-key global-map (kbd "<menu> k") 'scroll-other-window-down)
 ;; 绘制弹窗
 (use-package popwin
   :config
@@ -46,20 +46,14 @@
   )
 (window-numbering-mode 1)
 (define-key global-map (kbd "<menu> o") 'other-window)
-(define-key evil-normal-state-map (kbd "<SPC> o") 'other-window)
-(define-key evil-normal-state-map (kbd "<SPC> 0") 'select-window-0)
-(define-key evil-normal-state-map (kbd "<SPC> 1") 'select-window-1)
-(define-key evil-normal-state-map (kbd "<SPC> 2") 'select-window-2)
-(define-key evil-normal-state-map (kbd "<SPC> 3") 'select-window-3)
-(define-key evil-normal-state-map (kbd "<SPC> 4") 'select-window-4)
-(define-key evil-normal-state-map (kbd "<SPC> -") 'shrink-window)
-(define-key evil-normal-state-map (kbd "<SPC> =") 'enlarge-window)
-(define-key evil-normal-state-map (kbd "<SPC> [") 'shrink-window-horizontally)
-(define-key evil-normal-state-map (kbd "<SPC> ]") 'enlarge-window-horizontally)
-(define-key evil-normal-state-map (kbd "<SPC> w0") 'delete-window)
-(define-key evil-normal-state-map (kbd "<SPC> w1") 'delete-other-windows)
-(define-key evil-normal-state-map (kbd "<SPC> w2") 'split-window-below)
-(define-key evil-normal-state-map (kbd "<SPC> w3") 'split-window-right)
+(define-key global-map (kbd "<menu> -") 'shrink-window)
+(define-key global-map (kbd "<menu> =") 'enlarge-window)
+(define-key global-map (kbd "<menu> [") 'shrink-window-horizontally)
+(define-key global-map (kbd "<menu> ]") 'enlarge-window-horizontally)
+(define-key global-map (kbd "<menu> 0") 'delete-window)
+(define-key global-map (kbd "<menu> 1") 'delete-other-windows)
+(define-key global-map (kbd "<menu> 2") 'split-window-below)
+(define-key global-map (kbd "<menu> 3") 'split-window-right)
 ;; 设置dired-mode只有一个buffer
 (put 'dired-find-alternate-file 'disabled nil)
 (with-eval-after-load 'dired
@@ -74,20 +68,13 @@
   ;; 定义和它有关的功能的 leader key
   (define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map))
 (use-package neotree
-  :config
-  (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
-  (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
-  (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
-  (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
-  (define-key evil-normal-state-map (kbd "<SPC> pt") 'neotree-toggle)
-  (define-key evil-normal-state-map (kbd "<SPC> pr") 'neotree-refresh)
-  )
+ )
 
 ;; ----------------------------------------frames
-(define-key evil-normal-state-map (kbd "<SPC> 50") 'delete-frame)
-(define-key evil-normal-state-map (kbd "<SPC> 5o") 'other-frame)
-(define-key evil-normal-state-map (kbd "<SPC> 52") 'make-frame)
-(define-key evil-normal-state-map (kbd "<SPC> 55") 'find-file-other-frame)
+(define-key evil-normal-state-map (kbd "<menu> 50") 'delete-frame)
+(define-key evil-normal-state-map (kbd "<menu> 5o") 'other-frame)
+(define-key evil-normal-state-map (kbd "<menu> 52") 'make-frame)
+(define-key evil-normal-state-map (kbd "<menu> 55") 'find-file-other-frame)
 
 (defun buffers-windows-frames-file()
   (interactive)
