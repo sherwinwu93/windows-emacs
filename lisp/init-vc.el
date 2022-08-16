@@ -1,7 +1,7 @@
 (use-package magit
   :config
-  (define-key global-map (kbd "<menu> g") 'magit)
   :bind (("C-x g" . magit)))
+(define-key global-map (kbd "<menu> g") 'magit)
 
 (defun vc-file()
   (interactive)
