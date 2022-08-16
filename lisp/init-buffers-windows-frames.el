@@ -1,12 +1,12 @@
 
 ;; ----------------------------------------files
-(global-set-key (kbd "<f1>") 'find-file)
 (define-key evil-normal-state-map (kbd "<SPC> f") 'find-file)
 ;; 更改默认目录
 (setq default-directory "~/notes/")
 ;; 自动同步硬盘文件
 (global-auto-revert-mode 1)
 ;; --------------------neotree
+(global-set-key (kbd "<f2>") 'neotree-toggle)
 (defun neotree-doc()
   (interactive)
   (find-file "~/.emacs.d/lisp/neotree.org"))
@@ -36,7 +36,7 @@
 (define-key evil-normal-state-map (kbd "<SPC> b") 'ivy-switch-buffer)
 
 ;; ----------------------------------------windows
-(global-set-key (kbd "<f2>") 'other-window)
+(global-set-key (kbd "<f1>") 'other-window)
 ;; 移动其它窗口
 (define-key evil-normal-state-map (kbd "<SPC> j") 'scroll-other-window)
 (define-key evil-normal-state-map (kbd "<SPC> k") 'scroll-other-window-down)
