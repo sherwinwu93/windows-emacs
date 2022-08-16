@@ -17,6 +17,7 @@
 (setq-default case-replace nil)
 ;; --------------------Replace
 (define-key global-map (kbd "<menu> s") 'query-replace)
+(define-key global-map (kbd "<menu> r") 'query-replace-regexp)
 ;; ----------------------------------------Edit
 ;; (define-key global-map (kbd "M-<return>") 'newline-and-indent)
 ;; 设置自动换行字数
