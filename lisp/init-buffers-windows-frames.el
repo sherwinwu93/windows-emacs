@@ -34,6 +34,8 @@
 ;; ----------------------------------------buffers
 
 (define-key global-map (kbd "<menu> b") 'ivy-switch-buffer)
+(define-key global-map (kbd "<menu> <left>") 'previous-buffer)
+(define-key global-map (kbd "<menu> <right>") 'next-buffer)
 
 ;; ----------------------------------------windows
 ;; 移动其它窗口

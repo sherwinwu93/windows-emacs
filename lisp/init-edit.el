@@ -53,6 +53,7 @@
 ;; --------------------Abbreviation
 (setq-default abbrev-mode t)
 (read-abbrev-file "~/.emacs.d/abbrev_defs")
+
 (define-key evil-normal-state-map (kbd "<SPC> ai") 'inverse-add-global-abbrev)
 (define-key evil-normal-state-map (kbd "<SPC> al") 'inverse-add-mode-abbrev)
 (define-key evil-normal-state-map (kbd "<SPC> au") 'unexpand-abbrev)
@@ -121,9 +122,9 @@
   (bookmark-save))
 (define-key global-map (kbd "<menu> s") 'bookmark-set$save)
 (define-key global-map (kbd "<menu> l") 'list-bookmarks)
-(define-key evil-normal-state-map (kbd ",mi") 'bookmark-set)
-(define-key evil-normal-state-map (kbd ",ms") 'bookmark-save)
-(define-key evil-normal-state-map (kbd ",me") 'edit-bookmarks)
+(defun bookmarks-file()
+  (interactive)
+  (find-file "~/.emacs.d/bookmarks"))
 
 (defun edit-file()
   (interactive)

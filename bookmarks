@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("init-edit.el"
+(("task.org"
+ (filename . "~/notes/todos/task.org")
+ (front-context-string . "#+LATEX_HEADER: ")
+ (rear-context-string)
+ (position . 1))
+("init-edit.el"
  (filename . "~/.emacs.d/lisp/init-edit.el")
  (front-context-string . ")\n(define-key gl")
  (rear-context-string . " (bookmark-save)")
@@ -22,16 +27,6 @@
  (front-context-string . "0106.md\n  drwxrw")
  (rear-context-string . "41 8月  13 00:26 ")
  (position . 164))
-("org-refile-last-stored"
- (filename . "~/notes/todos/task.org")
- (front-context-string . "** TODO [#B] NCE")
- (rear-context-string . "f) }\n* Learning\n")
- (position . 321))
-("org-capture-last-stored"
- (filename . "~/notes/todos/task.org")
- (front-context-string . "** TODO [#B] L20")
- (rear-context-string . "#B] L20 Topics\n\n")
- (position . 550))
 (".emacs.d"
  (filename . "~/.emacs.d/")
  (front-context-string)

@@ -8,8 +8,8 @@
 
 ;; macro
 (define-key global-map (kbd "<menu> mn") 'name-last-kbd-macro)
+(define-key global-map (kbd "<menu> mo") 'kbd-macro-config)
 (define-key global-map (kbd "<menu> mi") 'insert-kbd-macro)
-(define-key global-map (kbd "<menu> mo") 'open-kbd-macro-config)
 
 
 (defun kbd-macros-file()
