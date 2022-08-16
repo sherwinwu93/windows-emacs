@@ -1,4 +1,19 @@
-
+;; ----------------------------------------Copy
+(define-key key-translation-map (kbd "<menu>") 'super)
+;;对应Windows上面的Ctrl-a 全选
+;; (global-set-key (kbd "<super>-a") 'mark-whole-buffer)
+(global-set-key (kbd "<menu>") nil)
+(global-set-key (kbd "<menu>a") 'mark-whole-buffer)
+;;对应Windows上面的Ctrl-c 复制
+(global-set-key (kbd "<menu>c") 'kill-ring-save)
+;; 对应Windows上面的Ctrl-s 保存
+(global-set-key (kbd "<menu>s") 'save-buffer)
+;;对应Windows上面的Ctrl-v 粘贴
+(global-set-key (kbd "<menu>v") 'yank)
+;;对应Windows上面的Ctrol-z 撤销
+(global-set-key (kbd "<menu>z") 'undo) 
+;;对应Windows上面的Ctrol-x 剪切
+(global-set-key (kbd "<menu>x") 'kill-region) 
 ;; ----------------------------------------Search and Replace
 ;; --------------------Search
 ;; 设置查询不区分大小写: t不区分,nil区分
