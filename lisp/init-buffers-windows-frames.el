@@ -1,17 +1,17 @@
 
 ;; ----------------------------------------files
-(define-key evil-normal-state-map (kbd "<SPC> f") 'find-file)
+(define-key global-map (kbd "<menu> f") 'find-file)
 ;; 更改默认目录
 (setq default-directory "~/notes/")
 ;; 自动同步硬盘文件
 (global-auto-revert-mode 1)
 ;; --------------------neotree
-(global-set-key (kbd "<f2>") 'neotree-toggle)
+(global-set-key (kbd "<menu> p") 'neotree-toggle)
 (defun neotree-doc()
   (interactive)
   (find-file "~/.emacs.d/lisp/neotree.org"))
 ;; --------------------dired
-(define-key evil-normal-state-map (kbd "<SPC> d") 'dired)
+(define-key global-map (kbd "<menu> d") 'dired)
 ;; --------------------auto save
 ;; 自动保存
 (require 'auto-save)
@@ -30,13 +30,12 @@
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-item 10)
-(global-set-key (kbd "C-x C-r") 'recentf-open-files)
+(global-set-key (kbd "<menu> r") 'recentf-open-files)
 ;; ----------------------------------------buffers
 
-(define-key evil-normal-state-map (kbd "<SPC> b") 'ivy-switch-buffer)
+(define-key global-map (kbd "<menu> b") 'ivy-switch-buffer)
 
 ;; ----------------------------------------windows
-(global-set-key (kbd "<f1>") 'other-window)
 ;; 移动其它窗口
 (define-key evil-normal-state-map (kbd "<SPC> j") 'scroll-other-window)
 (define-key evil-normal-state-map (kbd "<SPC> k") 'scroll-other-window-down)
@@ -46,6 +45,7 @@
   (popwin-mode 1)
   )
 (window-numbering-mode 1)
+(define-key global-map (kbd "<menu> o") 'other-window)
 (define-key evil-normal-state-map (kbd "<SPC> o") 'other-window)
 (define-key evil-normal-state-map (kbd "<SPC> 0") 'select-window-0)
 (define-key evil-normal-state-map (kbd "<SPC> 1") 'select-window-1)
