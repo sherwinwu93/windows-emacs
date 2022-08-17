@@ -1,5 +1,4 @@
 ;; ----------------------------------------其他
-(define-key key-translation-map (kbd "<menu>") (kbd "<menu>"))
 (global-set-key (kbd "<menu>") nil)
 ;; 关闭按键提示功能
 (setq suggest-key-bindings nil)

@@ -18,7 +18,7 @@
 (require 'init-evil)
 ;; ----------------------------------------
 (require 'init-better-defaults)
-(require 'init-buffers-windows-frames)
+(require 'init-files)
 (require 'init-edit)
 (require 'init-kbd-macros)
 ;; ----------------------------------------
@@ -37,7 +37,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(org-pomodoro markdown-mode google-translate jdee neotree projectile web-mode rime posframe cnfonts magit spacemacs-theme window-numbering which-key use-package smartparens popwin nodejs-repl monokai-theme js2-mode hungry-delete exec-path-from-shell evil-surround evil-nerd-commenter evil-leader counsel company))
+   '(youdao-dictionary org-pomodoro markdown-mode google-translate jdee neotree projectile web-mode rime posframe cnfonts magit spacemacs-theme window-numbering which-key use-package smartparens popwin nodejs-repl monokai-theme js2-mode hungry-delete exec-path-from-shell evil-surround evil-nerd-commenter evil-leader counsel company))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(transient-mark-mode nil))
