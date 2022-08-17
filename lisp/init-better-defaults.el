@@ -13,7 +13,7 @@
 ;; 关闭工具栏
 (tool-bar-mode -1)
 ;; 关闭菜单栏
-(menu-bar-mode 1)
+(menu-bar-mode -1)
 ;; 关闭文件滑动控件
 (scroll-bar-mode -1)
 ;; --------------------interactive

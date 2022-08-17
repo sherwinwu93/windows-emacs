@@ -1,3 +1,5 @@
+;; ----------------------------------------tab
+(require 'init-tab)
 
 ;; ----------------------------------------files
 (define-key global-map (kbd "<menu> f") 'find-file)
