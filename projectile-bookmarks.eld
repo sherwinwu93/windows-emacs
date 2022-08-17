@@ -1,1 +1,1 @@
-("~/.emacs.d/" "/mnt/c/Users/wusd/codes/notes/")
+("/mnt/d/git-code/notes/" "~/.emacs.d/")

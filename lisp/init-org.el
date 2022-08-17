@@ -1,6 +1,8 @@
 
 ;; ----------------------------------------agenda
 (require 'org)
+(define-key org-mode-map (kbd "<RET>") 'org-return-indent)
+(define-key org-mode-map (kbd "C-j") 'org-return)
 ;; 快速查询等等
 (define-key global-map (kbd "C-c a") 'org-agenda)
 (define-key evil-normal-state-map (kbd "<SPC> aa") 'org-agenda)
@@ -82,6 +84,7 @@
 ;; --------------------refile
 (define-key global-map (kbd "C-c r") 'org-refile)
 (define-key evil-normal-state-map (kbd "<SPC> r") 'org-refile)
+(define-key evil-visual-state-map (kbd "<SPC> r") 'org-refile)
 (setq org-refile-targets '(
 			   ;;修复bug,不可删除
 			   (nil :maxlevel . 1)
