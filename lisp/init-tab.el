@@ -9,10 +9,10 @@
     (or
      (string-prefix-p "*epc" name)
      (string-prefix-p "*helm" name)
+     (string-prefix-p "*Help" name)
      (string-prefix-p "*Compile-Log*" name)
      (string-prefix-p "*lsp" name)
-     (and (string-prefix-p "magit" name)
-               (not (file-name-extension name)))
+     (string-prefix-p "magit*" name)
      )))
 
 (defun awesome-tab-buffer-groups ()
@@ -39,6 +39,7 @@
     ;;  "OrgMode")
     (t
      (awesome-tab-get-group-name (current-buffer))))))
+
 
 
 (provide 'init-tab)
