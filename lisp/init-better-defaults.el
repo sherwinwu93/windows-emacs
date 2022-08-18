@@ -1,7 +1,7 @@
 ;; ----------------------------------------其他
 ;; 改键<menu>为modifier
 (define-key global-map (kbd "<menu>") nil)
-(define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier) 
+(define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
 ;; 关闭按键提示功能
 (setq suggest-key-bindings nil)
 ;; yes no -> y n

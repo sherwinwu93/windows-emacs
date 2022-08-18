@@ -39,8 +39,8 @@
     ;;  "OrgMode")
     (t
      (awesome-tab-get-group-name (current-buffer))))))
-(define-key global-map (kbd "s-7") 'awesome-tab-backward-tab)
-(define-key global-map (kbd "s-8") 'awesome-tab-forward-tab)
+(define-key global-map (kbd "s-;") 'awesome-tab-backward-tab)
+(define-key global-map (kbd "s-'") 'awesome-tab-forward-tab)
 (define-key global-map (kbd "s-\\") 'awesome-tab-kill-other-buffers-in-current-group)
 
 
