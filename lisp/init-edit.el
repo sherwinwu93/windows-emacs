@@ -1,14 +1,14 @@
 ;; ----------------------------------------Copy
 ;;对应Windows上面的Ctrl-a 全选
-(global-set-key (kbd "<menu> a") 'mark-whole-buffer)
+(global-set-key (kbd "s-a") 'mark-whole-buffer)
 ;;对应Windows上面的Ctrl-c 复制
-(global-set-key (kbd "<menu> c") 'kill-ring-save)
+(global-set-key (kbd "s-c") 'kill-ring-save)
 ;;对应Windows上面的Ctrl-v 粘贴
-(global-set-key (kbd "<menu> v") 'yank)
+(global-set-key (kbd "s-v") 'yank)
 ;;对应Windows上面的Ctrol-z 撤销
-(global-set-key (kbd "<menu> z") 'undo) 
+(global-set-key (kbd "s-z") 'undo) 
 ;;对应Windows上面的Ctrol-x 剪切
-(global-set-key (kbd "<menu> x") 'kill-region) 
+(global-set-key (kbd "s-x") 'kill-region) 
 ;; ----------------------------------------Search and Replace
 ;; --------------------Search
 ;; 设置查询不区分大小写: t不区分,nil区分
@@ -16,8 +16,8 @@
 ;; 替换时不改变大小写情况
 (setq-default case-replace nil)
 ;; --------------------Replace
-(define-key global-map (kbd "<menu> s") 'query-replace)
-(define-key global-map (kbd "<menu> r") 'query-replace-regexp)
+(define-key global-map (kbd "s-s") 'query-replace)
+(define-key global-map (kbd "s-r") 'query-replace-regexp)
 ;; ----------------------------------------Edit
 ;; (define-key global-map (kbd "M-<return>") 'newline-and-indent)
 ;; 设置自动换行字数
@@ -123,8 +123,8 @@
   (interactive)
   (bookmark-set)
   (bookmark-save))
-(define-key global-map (kbd "<menu> b") 'bookmark-set$save)
-(define-key global-map (kbd "<menu> l") 'list-bookmarks)
+(define-key global-map (kbd "s-b") 'bookmark-set$save)
+(define-key global-map (kbd "s-l") 'list-bookmarks)
 (defun bookmarks-file()
   (interactive)
   (find-file "~/.emacs.d/bookmarks"))

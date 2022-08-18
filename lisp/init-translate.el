@@ -1,5 +1,5 @@
 (use-package youdao-dictionary)
-(define-key global-map (kbd "<menu> t") 'youdao-dictionary-search-at-point)
+(define-key global-map (kbd "s-t") 'youdao-dictionary-search-at-point)
 
 
 

@@ -4,9 +4,9 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-refile-last-stored"
  (filename . "~/notes/todos/finished.org")
- (front-context-string . "** DONE [#C] L21")
- (rear-context-string . "16 Tue 15:49]\n*\n")
- (position . 2006))
+ (front-context-string . "** DONE L22 预习\n ")
+ (rear-context-string . "8-17 Wed 21:10]\n")
+ (position . 2146))
 ("task.org"
  (filename . "~/notes/todos/task.org")
  (front-context-string . "#+LATEX_HEADER: ")

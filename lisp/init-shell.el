@@ -1,6 +1,6 @@
 (use-package nodejs-repl)
 (use-package exec-path-from-shell)
-(define-key global-map (kbd "<menu> '") 'shell)
+(define-key global-map (kbd "s-'") 'shell)
 
 (defun shell-file()
   (interactive)

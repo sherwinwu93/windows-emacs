@@ -2,7 +2,7 @@
 (define-abbrev-table 'global-abbrev-table
   '(
     ("de" "denom" nil :count 13)
-    ("hw" "homework" nil :count 1)
+    ("hw" "homework" nil :count 2)
     ("lij" "lijie" nil :count 1)
     ("nu" "numer" nil :count 10)
    ))
