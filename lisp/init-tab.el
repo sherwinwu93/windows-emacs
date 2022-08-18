@@ -7,6 +7,7 @@
 (defun awesome-tab-hide-tab (x)
   (let ((name (format "%s" x)))
     (or
+     (string-equal "*" (substring name 0 1))
      (string-prefix-p "*epc" name)
      (string-prefix-p "*helm" name)
      (string-prefix-p "*Help" name)
@@ -39,8 +40,8 @@
     ;;  "OrgMode")
     (t
      (awesome-tab-get-group-name (current-buffer))))))
-(define-key global-map (kbd "s-;") 'awesome-tab-backward-tab)
-(define-key global-map (kbd "s-'") 'awesome-tab-forward-tab)
+(define-key global-map (kbd "s-[") 'awesome-tab-backward-tab)
+(define-key global-map (kbd "s-]") 'awesome-tab-forward-tab)
 (define-key global-map (kbd "s-\\") 'awesome-tab-kill-other-buffers-in-current-group)
 
 

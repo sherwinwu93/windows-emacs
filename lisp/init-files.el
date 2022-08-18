@@ -3,6 +3,7 @@
 
 ;; ----------------------------------------files
 (define-key global-map (kbd "s-d") 'find-file)
+(define-key global-map (kbd "s-f") 'find-file)
 ;; 更改默认目录
 (setq default-directory "~/notes/")
 ;; 自动同步硬盘文件
@@ -28,7 +29,7 @@
 (setq recentf-max-menu-item 10)
 (global-set-key (kbd "s-h") 'recentf-open-files)
 ;; ----------------------------------------buffers
-
+(define-key global-map (kbd "s-b") 'list-buffers)
 (define-key global-map (kbd "s-<menu>") 'ivy-switch-buffer)
 (define-key global-map (kbd "s-<left>") 'previous-buffer)
 (define-key global-map (kbd "s-<right>") 'next-buffer)
@@ -46,8 +47,8 @@
 (define-key global-map (kbd "s-o") 'other-window)
 (define-key global-map (kbd "s--") 'shrink-window)
 (define-key global-map (kbd "s-=") 'enlarge-window)
-(define-key global-map (kbd "s-[") 'shrink-window-horizontally)
-(define-key global-map (kbd "s-]") 'enlarge-window-horizontally)
+(define-key global-map (kbd "s-;") 'shrink-window-horizontally)
+(define-key global-map (kbd "s-'") 'enlarge-window-horizontally)
 (define-key global-map (kbd "s-0") 'delete-window)
 (define-key global-map (kbd "s-1") 'delete-other-windows)
 (define-key global-map (kbd "s-2") 'split-window-below)

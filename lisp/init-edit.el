@@ -124,7 +124,7 @@
   (interactive)
   (bookmark-set)
   (bookmark-save))
-(define-key global-map (kbd "s-b") 'bookmark-set$save)
+(define-key global-map (kbd "s-m m") 'bookmark-set$save)
 (define-key global-map (kbd "s-l") 'list-bookmarks)
 (defun bookmarks-file()
   (interactive)
