@@ -23,6 +23,8 @@
 (define-key key-translation-map (kbd "<SPC> x") (kbd "C-x"))
 (define-key key-translation-map (kbd "<SPC> c") (kbd "C-c"))
 (define-key key-translation-map (kbd "<SPC> h") (kbd "C-h"))
+(define-key key-translation-map (kbd "C-j") (kbd "C-n"))
+(define-key key-translation-map (kbd "C-k") (kbd "C-p"))
 
 
 
