@@ -10,6 +10,9 @@
 ;; 改键<menu>为modifier
 (define-key global-map (kbd "<menu>") nil)
 (define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
+(define-key key-translation-map (kbd "<f10>") (kbd "C-x"))
+(define-key key-translation-map (kbd "<f11>") (kbd "C-c"))
+(define-key key-translation-map (kbd "<f12>") (kbd "C-h"))
 
 ;; ----------------------------------------Emacs画面
 ;;设置Emacs默认全屏

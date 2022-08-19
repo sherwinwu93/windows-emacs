@@ -8,7 +8,8 @@
   (let ((name (format "%s" x)))
     (or
      (string-equal "*" (substring name 0 1))
-     ;; (string-prefix-p "*epc" name)
+     (string-prefix-p "*whick-key*" name)
+     (string-prefix-p "*Org tags*" name)
      ;; (string-prefix-p "*helm" name)
      ;; (string-prefix-p "*Help" name)
      ;; (string-prefix-p "*Compile-Log*" name)
@@ -28,13 +29,13 @@
                             magit-file-mode
                             magit-blob-mode
                             magit-blame-mode
-			    ;; dired-mode
                             )))
      "Emacs")
     ((derived-mode-p 'eshell-mode)
      "EShell")
     ((derived-mode-p 'emacs-lisp-mode)
      "Elisp")
+    ;; dired-mode
     ;; ((derived-mode-p 'dired-mode)
     ;;  "Dired")
     ;; ((memq major-mode '(org-mode org-agenda-mode diary-mode))

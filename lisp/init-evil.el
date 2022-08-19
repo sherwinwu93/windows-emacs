@@ -20,9 +20,10 @@
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 
-(define-key key-translation-map (kbd "<SPC> c") (kbd "C-c"))
 (define-key key-translation-map (kbd "<SPC> x") (kbd "C-x"))
+(define-key key-translation-map (kbd "<SPC> c") (kbd "C-c"))
 (define-key key-translation-map (kbd "<SPC> h") (kbd "C-h"))
+
 
 
 (defun evil-file()
