@@ -10,6 +10,7 @@
 (global-set-key (kbd "s-z") 'undo) 
 ;;对应Windows上面的Ctrol-x 剪切
 (global-set-key (kbd "s-x") 'kill-region) 
+(define-key global-map (kbd "s-s") 'save-buffer)
 ;; ----------------------------------------Search and Replace
 ;; --------------------Search
 ;; 设置查询不区分大小写: t不区分,nil区分
@@ -17,8 +18,7 @@
 ;; 替换时不改变大小写情况
 (setq-default case-replace nil)
 ;; --------------------Replace
-(define-key global-map (kbd "s-s") 'query-replace)
-(define-key global-map (kbd "s-r") 'query-replace-regexp)
+(define-key global-map (kbd "s-r") 'query-replace)
 ;; ----------------------------------------Edit
 ;; (define-key global-map (kbd "M-<return>") 'newline-and-indent)
 ;; 设置自动换行字数
