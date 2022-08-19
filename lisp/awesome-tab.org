@@ -1,0 +1,60 @@
+* 目地
+  学会使用和定制tab
+* 已知
+  联想: tab页类似于buffer
+  想要:
+    - 用tab完全代替buffer
+    - 关闭非当前tab
+    - tab的分组,系统的和项目的
+* Table of Contents
+- What is it?
+  - Installation [ˌɪnstəˈleɪʃn]
+  - Usage 
+  - AceJump
+  - SwicthTabByIndex
+  - Plugins [plʌgɪn]
+  - Customize [ˈkʌstəmaɪz]
+    - Icon
+    - Theme
+    - HideRules
+    - GroupRules
+    - FixedWidth
+    - DisplayFunctionName
+    - ShowTabIndex
+    - AdjustTabHeight
+    - AdjustTabContrast [ˈkɒntrɑːst]
+    - AdjustActiveBar
+** What is it
+   out-of-the-box configuration to use tabs
+*** Installation
+    1. .el to load-path
+    2. use-package
+       (use-package awesome-tab
+        :load-path "path/to/your/awesome-tab"
+        :config
+        (awesome-tab-mode t))
+    3. reload-emacs
+*** Usage
+    functions: awesome-tab-*
+*** AceJump
+    M-x awesome-tab-ace-jump, characters will show on tabs, type characters to jump
+    [idea的ace-jump]
+*** SwitchTabByIndex
+    Don't need
+*** Plugins
+*** Customize
+**** Icon
+**** Theme
+**** HideRules
+     hide some tabs by function, tab will hide if function return t. 
+       - custom: awesome-tab-hide-tab()
+       - default: awesome-hide-tab()
+**** GroupRules
+     tab group function
+       awesome-tab-buffer-gropus
+**** FixedWidth
+**** DisplayFunctionName
+**** ShowTableIndex
+**** AdjustTabHeight
+**** AdjustTabContrast
+**** AdjustActiveBar

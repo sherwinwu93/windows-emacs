@@ -3,16 +3,16 @@
   :config
   (awesome-tab-mode t))
 
-;; tab隐藏
+;; if return t, tab will hide
 (defun awesome-tab-hide-tab (x)
   (let ((name (format "%s" x)))
     (or
      (string-equal "*" (substring name 0 1))
-     (string-prefix-p "*epc" name)
-     (string-prefix-p "*helm" name)
-     (string-prefix-p "*Help" name)
-     (string-prefix-p "*Compile-Log*" name)
-     (string-prefix-p "*lsp" name)
+     ;; (string-prefix-p "*epc" name)
+     ;; (string-prefix-p "*helm" name)
+     ;; (string-prefix-p "*Help" name)
+     ;; (string-prefix-p "*Compile-Log*" name)
+     ;; (string-prefix-p "*lsp" name)
      (string-prefix-p "magit" name)
      )))
 
@@ -38,8 +38,10 @@
     ;;  "Dired")
     ;; ((memq major-mode '(org-mode org-agenda-mode diary-mode))
     ;;  "OrgMode")
+    ;; (t
+    ;;  (awesome-tab-get-group-name (current-buffer)))
     (t
-     (awesome-tab-get-group-name (current-buffer))))))
+     "project"))))
 (define-key global-map (kbd "s-[") 'awesome-tab-backward-tab)
 (define-key global-map (kbd "s-]") 'awesome-tab-forward-tab)
 (define-key global-map (kbd "s-\\") 'awesome-tab-kill-other-buffers-in-current-group)
