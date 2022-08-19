@@ -3,6 +3,7 @@
 
 ;; ----------------------------------------files
 (define-key global-map (kbd "s-d") 'find-file)
+(define-key global-map (kbd "s-f") 'find-file)
 ;; 更改默认目录
 (setq default-directory "~/notes/")
 ;; 自动同步硬盘文件

@@ -9,7 +9,6 @@
   ;; 定义和它有关的功能的 leader key
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map))
   (define-key projectile-mode-map (kbd "s-p s") 'projectile-grep)
-  (define-key projectile-mode-map (kbd "s-f") 'projectile-grep)
 ;; --------------------search
 
 ;; ----------------------------------------neotree

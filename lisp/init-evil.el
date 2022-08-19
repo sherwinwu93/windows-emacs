@@ -25,6 +25,8 @@
 (define-key key-translation-map (kbd "<SPC> h") (kbd "C-h"))
 (define-key key-translation-map (kbd "C-k") (kbd "<up>"))
 (define-key key-translation-map (kbd "C-j") (kbd "<down>"))
+(define-key key-translation-map (kbd "C-h") (kbd "<left>"))
+(define-key key-translation-map (kbd "C-l") (kbd "<right>"))
 
 
 
