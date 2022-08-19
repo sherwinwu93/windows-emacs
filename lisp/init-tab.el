@@ -33,8 +33,8 @@
      "Emacs")
     ((derived-mode-p 'eshell-mode)
      "EShell")
-    ((derived-mode-p 'emacs-lisp-mode)
-     "Elisp")
+    ;; ((derived-mode-p 'emacs-lisp-mode)
+    ;;  "Elisp")
     ;; dired-mode
     ;; ((derived-mode-p 'dired-mode)
     ;;  "Dired")
