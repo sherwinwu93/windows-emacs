@@ -31,8 +31,6 @@
 ;; ----------------------------------------buffers
 (define-key global-map (kbd "s-b") 'list-buffers)
 (define-key global-map (kbd "s-<menu>") 'ivy-switch-buffer)
-(define-key global-map (kbd "s-<left>") 'previous-buffer)
-(define-key global-map (kbd "s-<right>") 'next-buffer)
 
 ;; ----------------------------------------windows
 ;; 移动其它窗口

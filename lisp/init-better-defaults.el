@@ -6,6 +6,7 @@
 (setq suggest-key-bindings nil)
 ;; yes no -> y n
 (fset 'yes-or-no-p 'y-or-n-p)
+(global-set-key (kbd "<escape>")      'keyboard-escape-quit)
 
 ;; ----------------------------------------Emacs画面
 ;;设置Emacs默认全屏

@@ -13,6 +13,7 @@
      ;; (string-prefix-p "*Help" name)
      ;; (string-prefix-p "*Compile-Log*" name)
      ;; (string-prefix-p "*lsp" name)
+     (string-prefix-p "COMMIT_EDITMSG" name)
      (string-prefix-p "magit" name)
      )))
 
@@ -42,8 +43,11 @@
     ;;  (awesome-tab-get-group-name (current-buffer)))
     (t
      "project"))))
-(define-key global-map (kbd "s-[") 'awesome-tab-backward-tab)
-(define-key global-map (kbd "s-]") 'awesome-tab-forward-tab)
+;; fixedWidth
+;; (setq awesome-tab-label-fixed-length 14)
+(setq awesome-tab-height 100)
+(define-key global-map (kbd "s-<left>") 'awesome-tab-backward-tab)
+(define-key global-map (kbd "s-<right>") 'awesome-tab-forward-tab)
 (define-key global-map (kbd "s-\\") 'awesome-tab-kill-other-buffers-in-current-group)
 
 
