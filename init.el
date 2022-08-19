@@ -27,6 +27,7 @@
 (require 'init-shell)
 (require 'init-input)
 ;; ----------------------------------------语言
+(require 'init-project)
 (require 'init-scheme)
 (require 'init-js)
 (require 'init-markdown)
