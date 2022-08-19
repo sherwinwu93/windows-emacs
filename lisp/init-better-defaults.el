@@ -1,12 +1,15 @@
 ;; ----------------------------------------其他
-;; 改键<menu>为modifier
-(define-key global-map (kbd "<menu>") nil)
-(define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
+;; which-key
+(which-key-mode 1)
 ;; 关闭按键提示功能
 (setq suggest-key-bindings nil)
 ;; yes no -> y n
 (fset 'yes-or-no-p 'y-or-n-p)
-(global-set-key (kbd "<escape>")      'keyboard-escape-quit)
+;; ----------------------------------------系统级按键
+(global-set-key (kbd "<escape>")  'keyboard-escape-quit)
+;; 改键<menu>为modifier
+(define-key global-map (kbd "<menu>") nil)
+(define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
 
 ;; ----------------------------------------Emacs画面
 ;;设置Emacs默认全屏

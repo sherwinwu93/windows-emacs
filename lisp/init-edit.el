@@ -57,12 +57,6 @@
 ;; --------------------Abbreviation
 (setq-default abbrev-mode t)
 (read-abbrev-file "~/.emacs.d/abbrev_defs")
-
-(define-key evil-normal-state-map (kbd "<SPC> ai") 'inverse-add-global-abbrev)
-(define-key evil-normal-state-map (kbd "<SPC> al") 'inverse-add-mode-abbrev)
-(define-key evil-normal-state-map (kbd "<SPC> au") 'unexpand-abbrev)
-(define-key evil-normal-state-map (kbd "<SPC> ae") 'edit-abbrevs)
-(define-key evil-normal-state-map (kbd "<SPC> as") 'write-abbrev-file)
 ;; --------------------Hippie补全
 ;; 开启全局Company补全
 (use-package company

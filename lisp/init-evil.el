@@ -4,6 +4,33 @@
 (use-package evil-surround)
 (use-package evil-nerd-commenter)
 (use-package which-key)
+(evil-leader/set-key
+  "i" 'string-insert-rectangle
+  ":" 'counset-M-x
+  )
+
+;; 激活evil的leaderKey
+(global-evil-leader-mode)
+;; 开启evil模式
+(evil-mode 1)
+
+(evil-leader/set-leader "<SPC>")
+
+;; 清空evil insert模式的map,使用默认
+(setcdr evil-insert-state-map nil)
+(define-key evil-insert-state-map [escape] 'evil-normal-state)
+
+(define-key key-translation-map (kbd "<SPC> c") (kbd "C-c"))
+(define-key key-translation-map (kbd "<SPC> x") (kbd "C-x"))
+(define-key key-translation-map (kbd "<SPC> h") (kbd "C-h"))
+
+
+(defun evil-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-evil.el"))
+
+(provide 'init-evil)
+
 ;; {{ specify major mode uses Evil (vim) NORMAL state or EMACS original state.
 ;; You may delete this setup to use Evil NORMAL state always.
 ;; (dolist (p '((minibuffer-inactive-mode . emacs)
@@ -45,29 +72,3 @@
 ;;   (evil-set-initial-state (car p) (cdr p)))
 ;; }}
 ;; evil leaderKey
-(evil-leader/set-key
-  "i" 'string-insert-rectangle
-  ":" 'counset-M-x
-  )
-
-;; 激活evil的leaderKey
-(global-evil-leader-mode)
-;; 开启evil模式
-(evil-mode 1)
-
-(evil-leader/set-leader "<SPC>")
-
-;; 清空evil insert模式的map,使用默认
-(setcdr evil-insert-state-map nil)
-(define-key evil-insert-state-map [escape] 'evil-normal-state)
-
-
-;; which-key
-(which-key-mode 1)
-
-
-(defun evil-file()
-  (interactive)
-  (find-file "~/.emacs.d/lisp/init-evil.el"))
-
-(provide 'init-evil)

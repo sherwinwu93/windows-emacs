@@ -28,7 +28,7 @@
                             magit-file-mode
                             magit-blob-mode
                             magit-blame-mode
-			    dired-mode
+			    ;; dired-mode
                             )))
      "Emacs")
     ((derived-mode-p 'eshell-mode)
@@ -45,7 +45,7 @@
      "project"))))
 ;; fixedWidth
 ;; (setq awesome-tab-label-fixed-length 14)
-(setq awesome-tab-height 100)
+(setq awesome-tab-height 120)
 (define-key global-map (kbd "s-<left>") 'awesome-tab-backward-tab)
 (define-key global-map (kbd "s-<right>") 'awesome-tab-forward-tab)
 (define-key global-map (kbd "s-\\") 'awesome-tab-kill-other-buffers-in-current-group)
