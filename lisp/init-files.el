@@ -55,22 +55,6 @@
 (put 'dired-find-alternate-file 'disabled nil)
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
-;; --------------------project
-(use-package projectile
-  :config
-  ;; 把它的缓存挪到 ~/.emacs.d/.cache/ 文件夹下，让 gitignore 好做
-  (setq projectile-cache-file (expand-file-name ".cache/projectile.cache" user-emacs-directory))
-  ;; 全局 enable 这个 minor mode
-  (projectile-mode 1)
-  ;; 定义和它有关的功能的 leader key
-  (define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map))
-;; --------------------neotree
-(use-package neotree
- )
-(global-set-key (kbd "s-p") 'neotree-toggle)
-(defun neotree-doc()
-  (interactive)
-  (find-file "~/.emacs.d/lisp/neotree.org"))
 ;; ----------------------------------------frames
 (define-key evil-normal-state-map (kbd "s-5 0") 'delete-frame)
 (define-key evil-normal-state-map (kbd "s-5 o") 'other-frame)
