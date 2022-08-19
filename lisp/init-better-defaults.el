@@ -34,13 +34,15 @@
 (use-package counsel)
 
 ;; ----------------------------------------主题
-(use-package monokai-theme)
 (load-theme 'monokai 1)
-;;(use-package spacemacs-theme)
-;;(load-theme 'spacemacs-dark 1)
+;; (require 'spacemacs-dark-theme)
+;; (load-theme 'spacemacs-dark 1)
+;; (use-package jetbrains-darcula-theme
+;;   :config
+;;   (load-theme 'jetbrains-darcula t))
+
 
 (defun better-defaults-file()
   (find-file "~/.emacs.d/lisp/init-better-defaults.el"))
-
 
 (provide 'init-better-defaults)
