@@ -2,7 +2,7 @@
 ;; ----------------------------------------agenda
 (require 'org)
 (define-key org-mode-map (kbd "<RET>") 'org-return-indent)
-(define-key org-mode-map (kbd "C-j") 'org-return)
+;; (define-key org-mode-map (kbd "C-j") 'org-return)
 ;; 快速查询等等
 (define-key global-map (kbd "C-c a") 'org-agenda)
 ;; 设置agenda路径
