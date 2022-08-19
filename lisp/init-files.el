@@ -3,7 +3,6 @@
 
 ;; ----------------------------------------files
 (define-key global-map (kbd "s-d") 'find-file)
-(define-key global-map (kbd "s-f") 'find-file)
 ;; 更改默认目录
 (setq default-directory "~/notes/")
 ;; 自动同步硬盘文件
@@ -27,7 +26,7 @@
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-item 10)
-;; (global-set-key (kbd "s-h") 'recentf-open-files)
+(global-set-key (kbd "s-q") 'recentf-open-files)
 ;; ----------------------------------------buffers
 (define-key global-map (kbd "s-b") 'list-buffers)
 (define-key global-map (kbd "s-<menu>") 'ivy-switch-buffer)
