@@ -119,7 +119,7 @@
   (bookmark-set)
   (bookmark-save))
 (define-key global-map (kbd "s-m m") 'bookmark-set$save)
-(define-key global-map (kbd "s-l") 'list-bookmarks)
+(define-key global-map (kbd "s-m l") 'list-bookmarks)
 (defun bookmarks-file()
   (interactive)
   (find-file "~/.emacs.d/bookmarks"))
