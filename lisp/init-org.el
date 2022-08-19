@@ -7,7 +7,7 @@
 (define-key global-map (kbd "C-c a") 'org-agenda)
 ;; 设置agenda路径
 (setq org-agenda-files '("~/notes/todos/"))
-;; ----------------------------------------priority & tags & state
+;; ----------------------------------------priority & tags & TODO
 ;; 优先级
 (setq org-agenda-custom-commands
       '(
@@ -27,7 +27,8 @@
           (tags-todo "family")
           ))
         ))
-;; C-c C-t 打开state
+;; 代办事项 state
+(define-key org-mode-map (kbd "C-c t") 'org-todo)
 ;; !:增加时间戳
 ;; @:会空出一行
 ;; @/!: 同时使用
