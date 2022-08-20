@@ -8,6 +8,7 @@
 ;; 自动同步硬盘文件
 (global-auto-revert-mode 1)
 ;; --------------------dired
+
 ;; --------------------auto save
 ;; 自动保存
 (require 'auto-save)

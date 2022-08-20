@@ -41,7 +41,14 @@
   :hook (after-init . ivy-mode))
 (use-package swiper)
 (use-package counsel)
-
+(global-set-key (kbd "C-j") nil)
+(use-package avy
+  :ensure t
+  :bind
+  )
+;; todo
+(evil-leader/set-key "aw" 'avy-goto-char-2)
+(evil-leader/set-key "af" 'avy-goto-line)
 ;; ----------------------------------------主题
 (load-theme 'monokai 1)
 ;; (require 'spacemacs-dark-theme)

@@ -38,7 +38,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(jetbrains-darcula-theme youdao-dictionary org-pomodoro markdown-mode google-translate jdee neotree projectile web-mode rime posframe cnfonts magit spacemacs-theme window-numbering which-key use-package smartparens popwin nodejs-repl monokai-theme js2-mode hungry-delete exec-path-from-shell evil-surround evil-nerd-commenter evil-leader counsel company))
+   '(avy smex jetbrains-darcula-theme youdao-dictionary org-pomodoro markdown-mode google-translate jdee neotree projectile web-mode rime posframe cnfonts magit spacemacs-theme window-numbering which-key use-package smartparens popwin nodejs-repl monokai-theme js2-mode hungry-delete exec-path-from-shell evil-surround evil-nerd-commenter evil-leader counsel company))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(transient-mark-mode nil))

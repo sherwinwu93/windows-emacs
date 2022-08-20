@@ -120,7 +120,7 @@
   (bookmark-set)
   (bookmark-save))
 (evil-leader/set-key
-  "mm" 'bookmark-set$save
+  "mm" 'counsel-bookmark
   "ml" 'list-bookmarks
   )
 (defun bookmarks-file()
