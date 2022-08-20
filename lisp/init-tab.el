@@ -47,8 +47,8 @@
 ;; fixedWidth
 ;; (setq awesome-tab-label-fixed-length 14)
 (setq awesome-tab-height 120)
-(define-key global-map (kbd "M-h") 'awesome-tab-backward-tab)
-(define-key global-map (kbd "M-l") 'awesome-tab-forward-tab)
+(define-key global-map (kbd "M-<left>") 'awesome-tab-backward-tab)
+(define-key global-map (kbd "M-<right>") 'awesome-tab-forward-tab)
 (define-key global-map (kbd "M-\\") 'awesome-tab-kill-other-buffers-in-current-group)
 
 
