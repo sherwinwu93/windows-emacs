@@ -111,7 +111,7 @@
 ;;快速注释
 (evilnc-default-hotkeys)
 (evil-leader/set-key
-  "/" 'evilnc-comment-or-uncomment-lines
+  "\\" 'evilnc-comment-or-uncomment-lines
   )
 
 ;; --------------------bookmarks

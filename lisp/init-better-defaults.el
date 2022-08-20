@@ -24,7 +24,7 @@
 (define-key global-map (kbd "M-x") 'counsel-M-x)
 
 ;; ----------------------------------------Emacs画面
-;;设置Emacs默认全屏
+;; 设置Emacs默认全屏
 ;;(setq initial-frame-alist '((fullscreen . maximized)))
 ;; 关闭启动帮助画面
 (setq inhibit-splash-screen 1)
