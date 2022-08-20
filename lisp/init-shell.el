@@ -1,6 +1,6 @@
 (use-package nodejs-repl)
 (use-package exec-path-from-shell)
-(define-key global-map (kbd "C-x '") 'shell)
+(evil-leader/set-key "'" 'shell)
 
 (defun shell-file()
   (interactive)

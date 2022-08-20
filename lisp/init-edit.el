@@ -78,7 +78,7 @@
 (defun indent-buffer()
   (interactive)
   (indent-region (point-min) (point-max)))
- 
+
 (defun indent-region-or-buffer()
   (interactive)
   (save-excursion
@@ -110,16 +110,19 @@
 ;; --------------------注释
 ;;快速注释
 (evilnc-default-hotkeys)
-(define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
-(define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+(evil-leader/set-key
+  "/" 'evilnc-comment-or-uncomment-lines
+  )
 
 ;; --------------------bookmarks
 (defun bookmark-set$save()
   (interactive)
   (bookmark-set)
   (bookmark-save))
-(define-key global-map (kbd "s-m m") 'bookmark-set$save)
-(define-key global-map (kbd "s-m l") 'list-bookmarks)
+(evil-leader/set-key
+  "mm" 'bookmark-set$save
+  "ml" 'list-bookmarks
+  )
 (defun bookmarks-file()
   (interactive)
   (find-file "~/.emacs.d/bookmarks"))

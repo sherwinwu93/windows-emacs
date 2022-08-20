@@ -1,5 +1,5 @@
 (use-package youdao-dictionary)
-(define-key global-map (kbd "s-t") 'youdao-dictionary-search-at-point)
+(evil-leader/set-key "t" 'youdao-dictionary-search-at-point)
 
 
 

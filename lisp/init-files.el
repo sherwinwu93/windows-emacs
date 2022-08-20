@@ -2,8 +2,7 @@
 (require 'init-tab)
 
 ;; ----------------------------------------files
-(define-key global-map (kbd "s-d") 'find-file)
-(define-key global-map (kbd "s-f") 'find-file)
+(evil-leader/set-key "d" 'find-file)
 ;; 更改默认目录
 (setq default-directory "~/notes/")
 ;; 自动同步硬盘文件
@@ -27,39 +26,38 @@
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-item 10)
-(global-set-key (kbd "s-q") 'recentf-open-files)
+(evil-leader/set-key "h" 'recentf-open-files)
 ;; ----------------------------------------buffers
-(define-key global-map (kbd "s-b") 'list-buffers)
-(define-key global-map (kbd "s-<menu>") 'ivy-switch-buffer)
+(evil-leader/set-key "b" 'ivy-switch-buffer)
 
 ;; ----------------------------------------windows
-;; 移动其它窗口
-(define-key global-map (kbd "s-j") 'scroll-other-window)
-(define-key global-map (kbd "s-k") 'scroll-other-window-down)
 ;; 绘制弹窗
 (use-package popwin
   :config
   (popwin-mode 1)
   )
 (window-numbering-mode 1)
-(define-key global-map (kbd "s-o") 'other-window)
-(define-key global-map (kbd "s--") 'shrink-window)
-(define-key global-map (kbd "s-=") 'enlarge-window)
-(define-key global-map (kbd "s-;") 'shrink-window-horizontally)
-(define-key global-map (kbd "s-'") 'enlarge-window-horizontally)
-(define-key global-map (kbd "s-0") 'delete-window)
-(define-key global-map (kbd "s-1") 'delete-other-windows)
-(define-key global-map (kbd "s-2") 'split-window-below)
-(define-key global-map (kbd "s-3") 'split-window-right)
+(evil-leader/set-key
+  "o" 'other-window
+  "-" 'shrink-window
+  "=" 'enlarge-window
+  "[" 'shrink-window-horizontally
+  "]" 'enlarge-window-horizontally
+  "w0" 'delete-window
+  "w1" 'delete-other-windows
+  "w2" 'split-window-below
+  "w3" 'split-window-right
+  "1" 'select-window-1
+  "2" 'select-window-2
+  "3" 'select-window-3
+  "4" 'select-window-4
+  "5" 'select-window-5
+  )
 ;; 设置dired-mode只有一个buffer
 (put 'dired-find-alternate-file 'disabled nil)
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 ;; ----------------------------------------frames
-(define-key evil-normal-state-map (kbd "s-5 0") 'delete-frame)
-(define-key evil-normal-state-map (kbd "s-5 o") 'other-frame)
-(define-key evil-normal-state-map (kbd "s-5 2") 'make-frame)
-(define-key evil-normal-state-map (kbd "s-5 5") 'find-file-other-frame)
 
 (defun files-file()
   (interactive)

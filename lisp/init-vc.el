@@ -1,6 +1,6 @@
-(use-package magit
-  :config
-  :bind (("s-g" . magit)))
+(use-package magit)
+(evil-leader/set-key
+  "g" 'magit)
 
 (defun vc-file()
   (interactive)

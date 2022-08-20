@@ -6,9 +6,8 @@
   (setq projectile-cache-file (expand-file-name ".cache/projectile.cache" user-emacs-directory))
   ;; 全局 enable 这个 minor mode
   (projectile-mode 1)
-  ;; 定义和它有关的功能的 leader key
-  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map))
-  (define-key projectile-mode-map (kbd "s-p s") 'projectile-grep)
+  )
+(evil-leader/set-key "p" 'projectile-command-map)
 ;; --------------------search
 
 ;; ----------------------------------------neotree

@@ -10,9 +10,18 @@
 ;; 改键<menu>为modifier
 (define-key global-map (kbd "<menu>") nil)
 (define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
-(define-key key-translation-map (kbd "<f5>") (kbd "C-c"))
-(define-key key-translation-map (kbd "<f6>") (kbd "C-x"))
-(define-key key-translation-map (kbd "<f8>") (kbd "C-h"))
+;; --------------------Ctrl
+(define-key key-translation-map (kbd "<SPC> x") (kbd "C-x"))
+(define-key key-translation-map (kbd "<SPC> c") (kbd "C-c"))
+(define-key key-translation-map (kbd "<f12>") (kbd "C-h"))
+;; --------------------方向
+(define-key key-translation-map (kbd "C-k") (kbd "C-p"))
+(define-key key-translation-map (kbd "C-j") (kbd "C-n"))
+(define-key key-translation-map (kbd "C-h") (kbd "C-b"))
+(define-key key-translation-map (kbd "C-l") (kbd "C-f"))
+
+;; ----------------------------------------Commmand
+(define-key global-map (kbd "M-x") 'counsel-M-x)
 
 ;; ----------------------------------------Emacs画面
 ;;设置Emacs默认全屏

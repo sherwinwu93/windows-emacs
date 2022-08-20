@@ -6,9 +6,8 @@
 (use-package which-key)
 (evil-leader/set-key
   "i" 'string-insert-rectangle
-  ":" 'counset-M-x
+  ":" 'counsel-M-x
   )
-
 ;; 激活evil的leaderKey
 (global-evil-leader-mode)
 ;; 开启evil模式
@@ -19,14 +18,6 @@
 ;; 清空evil insert模式的map,使用默认
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
-
-(define-key key-translation-map (kbd "<SPC> x") (kbd "C-x"))
-(define-key key-translation-map (kbd "<SPC> c") (kbd "C-c"))
-(define-key key-translation-map (kbd "<SPC> h") (kbd "C-h"))
-(define-key key-translation-map (kbd "C-k") (kbd "<up>"))
-(define-key key-translation-map (kbd "C-j") (kbd "<down>"))
-(define-key key-translation-map (kbd "C-h") (kbd "<left>"))
-(define-key key-translation-map (kbd "C-l") (kbd "<right>"))
 
 
 
