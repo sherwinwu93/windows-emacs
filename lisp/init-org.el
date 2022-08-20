@@ -1,4 +1,5 @@
-
+(define-key org-mode-map (kbd "M-<left>") 'awesome-tab-backward-tab)
+(define-key org-mode-map (kbd "M-<right>") 'awesome-tab-forward-tab)
 ;; ----------------------------------------agenda
 (require 'org)
 (define-key org-mode-map (kbd "<RET>") 'org-return-indent)
